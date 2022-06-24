@@ -6,6 +6,7 @@ function App() {
   return (
     <>
       <NavBar />
+      <div className="my-10"></div>
       <Footer />
     </>
 

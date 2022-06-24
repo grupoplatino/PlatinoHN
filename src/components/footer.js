@@ -58,7 +58,7 @@ function Footer() {
       <div className="container px-5 py-12 mx-auto lg:px-5">
         <div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
           <div className="grid items-center grid-cols-12 gap-3">
-            <div className="mb-6 col-span-12 md:pb-0 md:col-span-5">
+            <div className="mb-0 md:mb-6 col-span-12 md:pb-0 md:col-span-5">
               <p className="text-white text-3xl font-semibold">Contáctanos</p>
               <p className="text-white my-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -93,10 +93,10 @@ function Footer() {
               <div className="mt-5 md:mt-0 md:col-span-2">
                 <form action="#" method="POST">
                   <div className="shadow overflow-hidden sm:rounded-md">
-                    <div className="px-4 py-5 sm:p-6">
+                    <div className="px-0 md:px-4 lg:px-6 py-5 sm:p-6">
                       <div className="grid grid-cols-6 gap-6">
                         <div className="col-span-6 sm:col-span-3">
-                          <label htmlFor="first-name" className="block mb-2 text-sm font-medium text-white">
+                          <label htmlFor="first-name" className="text-start block mb-2 text-sm font-medium text-white">
                             First name
                           </label>
                           <input
@@ -105,12 +105,12 @@ function Footer() {
                             id="first-name"
                             placeholder="First name"
                             autoComplete="given-name"
-                            className="py-1 px-2 bg-transparent pt-2 focus:ring-transparent border block w-full shadow-sm sm:text-sm border-gray-300"
+                            className="py-1 px-2 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
                           />
                         </div>
 
                         <div className="col-span-6 sm:col-span-3">
-                          <label htmlFor="last-name" className="block mb-2 text-sm font-medium text-white">
+                          <label htmlFor="last-name" className="text-start block mb-2 text-sm font-medium text-white">
                             Last name
                           </label>
                           <input
@@ -124,7 +124,7 @@ function Footer() {
                         </div>
 
                         <div className="col-span-6 sm:col-span-3">
-                          <label htmlFor="email-address" className="block mb-2 text-sm font-medium text-white">
+                          <label htmlFor="email-address" className="text-start block mb-2 text-sm font-medium text-white">
                             Email address
                           </label>
                           <input
@@ -138,7 +138,7 @@ function Footer() {
                         </div>
 
                         <div className="col-span-6 sm:col-span-3">
-                          <label htmlFor="phone-number" className="block mb-2 text-sm font-medium text-white">
+                          <label htmlFor="phone-number" className="text-start block mb-2 text-sm font-medium text-white">
                             Phone Number
                           </label>
                           <input
@@ -152,7 +152,7 @@ function Footer() {
                         </div>
 
                         <div className="col-span-6">
-                          <label htmlFor="message" className="block mb-2 text-sm font-medium text-white">
+                          <label htmlFor="message" className="text-start block mb-2 text-sm font-medium text-white">
                             Message
                           </label>
                           <textarea
@@ -167,7 +167,7 @@ function Footer() {
                         </div>
                       </div>
                     </div>
-                    <div className="px-4 pt-1 mb-6 text-left sm:px-6">
+                    <div className="px-4 pt-1 mb-8 text-left sm:px-6">
                       <button
                         type="submit"
                         className="inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -188,7 +188,7 @@ function Footer() {
             <div className="mx-auto">
               <LazyLoadImage effect="blur" src={grupo_platino} width="180" className="p-2" />
             </div>
-            <p className="text-white text-lg font-semibold">¿Quieres formar parte de nuestro equipo?</p>
+            <p className="text-white text-center text-lg font-semibold">¿Quieres formar parte de nuestro equipo?</p>
             <div className="w-full flex justify-center">
               <button
                 type="button"
