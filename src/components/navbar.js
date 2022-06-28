@@ -1,10 +1,27 @@
-import React from 'react';
-import platino_hn from '../assets/images/phn.png';
+import React, {useEffect, useState} from 'react';
+import platino_hn from '../assets/images/companies/phn.png';
 import { AiOutlineAppstore } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
+    const [show, setShow] = useState(false);
+    let typeNav = "bg-blackCustom-900";
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const handleScroll = () => {
+        if (window.outerWidth > 767) {
+            return  setShow(window.pageYOffset > 10);
+        }
+        if (window.outerWidth < 767) {
+            return setShow(window.outerWidth < 767)
+        }
+    };
     return (
-        <nav className="bg-blackCustom-900">
+        <nav className={ `${show && typeNav} fixed left-0 right-0 z-10`}>
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <div className="relative flex items-center justify-between h-16">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -22,18 +39,20 @@ function NavBar() {
                     </div>
                     <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
                         <div className="flex-shrink-0 flex items-center">
+                            <Link to="/">
                             <img className="block lg:hidden h-8 w-auto" src={platino_hn} alt="Workflow" />
                             <img className="hidden lg:block h-8 w-auto" src={platino_hn} alt="Workflow" />
+                            </Link>
                         </div>
                         <div className="hidden sm:block sm:ml-6">
                             <div className="flex space-x-4">
-                                <a href="/#" className="bg-blackCustom-700 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Sobre Nosotros</a>
+                                <Link to="/aboutUs" className="bg-blackCustom-700 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Sobre Nosotros</Link>
 
-                                <a href="/#" className="text-grayCustom-300 hover:bg-blackCustom-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Compañias</a>
+                                <Link to="/companies" className="text-grayCustom-300 hover:bg-blackCustom-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Compañias</Link>
 
-                                <a href="/#" className="text-grayCustom-300 hover:bg-blackCustom-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Financiamiento</a>
+                                <Link to="/financing" className="text-grayCustom-300 hover:bg-blackCustom-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Financiamiento</Link>
 
-                                <a href="/#" className="text-grayCustom-300 hover:bg-blackCustom-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+                                <Link to="/contact" className="text-grayCustom-300 hover:bg-blackCustom-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contacto</Link>
                             </div>
                         </div>
                     </div>
