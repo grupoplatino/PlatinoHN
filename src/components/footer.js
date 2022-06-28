@@ -1,54 +1,62 @@
 import React from "react";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import grupo_platino from '../assets/images/Grupo_Platino.png';
-import platino_capital from '../assets/images/logo_capital_white.svg';
-import platino_ferreteria from '../assets/images/logo_ferreteria_white.svg';
-import platino_usados from '../assets/images/logo_usados_white.svg';
-import platino_repuestos from '../assets/images/logo_repuestos_white.svg';
-import platino_logistics from '../assets/images/logo_logistics_white.svg';
-import platino_software from '../assets/images/logo_software_white.svg';
-import platino_inmobiliaria from '../assets/images/logo_imobiliaria_white.svg';
+import {
+  logo_grupo_platino,
+  platino_capital_white,
+  platino_ferreteria_white,
+  platino_inmobiliaria_white,
+  platino_logistics_white,
+  platino_motors_white,
+  platino_repuestos_white,
+  platino_software_white,
+  platino_usados_white
+} from '../assets/index';
 import { ImFacebook2 } from 'react-icons/im';
 import { IoLogoWhatsapp } from 'react-icons/io';
 import { FaInstagramSquare, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-
+import arrow_white from '../assets/images/icons/right_arrow_white.svg'
 
 function Footer() {
   const listItems = [
     {
-      logo: platino_capital,
+      logo: platino_capital_white,
       url: "https://www.grupoplatino.hn/",
       alt: ""
     },
     {
-      logo: platino_ferreteria,
+      logo: platino_ferreteria_white,
       url: "https://www.grupoplatino.hn/",
       alt: ""
     },
     {
-      logo: platino_usados,
+      logo: platino_usados_white,
       url: "https://www.grupoplatino.hn/",
       alt: ""
     },
     {
-      logo: platino_repuestos,
+      logo: platino_repuestos_white,
       url: "https://www.grupoplatino.hn/",
       alt: ""
     },
     {
-      logo: platino_logistics,
+      logo: platino_logistics_white,
       url: "https://www.grupoplatino.hn/",
       alt: ""
     },
     {
-      logo: platino_software,
+      logo: platino_software_white,
       url: "https://www.grupoplatino.hn/",
       alt: ""
     },
     {
-      logo: platino_inmobiliaria,
+      logo: platino_inmobiliaria_white,
+      url: "https://www.grupoplatino.hn/",
+      alt: ""
+    },
+    {
+      logo: platino_motors_white,
       url: "https://www.grupoplatino.hn/",
       alt: ""
     },
@@ -186,17 +194,17 @@ function Footer() {
         <div class="flex justify-center w-full">
           <div className="flex flex-col">
             <div className="mx-auto">
-              <LazyLoadImage effect="blur" src={grupo_platino} width="180" className="p-2" />
+              <LazyLoadImage effect="blur" src={logo_grupo_platino} width="180" className="p-2" />
             </div>
             <p className="text-white text-center text-lg font-semibold">¿Quieres formar parte de nuestro equipo?</p>
-            <div className="w-full flex justify-center">
+            <div className="w-full flex justify-center items-center">
               <button
                 type="button"
                 className="mb-6 mt-4 px-4 py-3 border text-white outline-none font-semibold focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform mx-5 flex">
-                <span className="ml-2">Ver Oportunidades Laborales</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
+                <span className="mr-1">Ver Oportunidades Laborales</span>
+                <span>
+                <img src={arrow_white} alt="Platino HN" className="h-4 ml-2 mt-1"/>
+                </span>
               </button>
             </div>
           </div>
@@ -205,7 +213,7 @@ function Footer() {
         <div className="w-full px-5 py-5">
           <div className="text-center">
             <div>
-              <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-6">
+              <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-6">
                 {listItems.map(function (item, index) {
                   return (
                     <div key={index}>
