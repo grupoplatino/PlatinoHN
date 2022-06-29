@@ -164,7 +164,7 @@ function AboutUs() {
                         <div class="tabs">
                             {faq.map(function (item, index) {
                                 return (
-                                    <div class="border tab mt-3">
+                                    <div key={index} class="border tab mt-3">
                                         <div class="border-l-2 border-transparent relative">
                                             <input class="w-full absolute z-10 cursor-pointer opacity-0 h-5 top-6" type="checkbox" id="chck1" />
                                             <header class="flex justify-between items-center p-5 pl-8 pr-8 cursor-pointer select-none tab-label" for="chck1">

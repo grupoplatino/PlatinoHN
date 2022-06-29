@@ -3,29 +3,29 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-.max-width-slick-item{
+.max-width-slick-item {
   max-width: 70% !important;
 }
 
-.bg-img-contact-header{
+.bg-img-contact-header {
   background-image: linear-gradient(to right bottom, rgba(21, 19, 19, 0.62), rgba(21, 19, 19, 0.90), rgba(21, 19, 19, 0.99)),
-          url("../src/assets/images/categories/landing_nosotros.jpg");
+    url("../src/assets/images/categories/landing_nosotros.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.iso-opacity{
+.iso-opacity {
   opacity: 1;
 }
 
-.h-iso-gray{
-  background-image:url("../src/assets/images/iso/phn-gray.svg");
+.h-iso-gray {
+  background-image: url("../src/assets/images/iso/phn-gray.svg");
   background-size: 580px;
   background-repeat: no-repeat;
   background-position: left;
@@ -33,28 +33,35 @@
 
 .tab {
   overflow: hidden;
-  }
-  .tab-label .test .minus {
-    display: none;
-  }
-  .tab-content {
+}
+
+.tab-label .test .minus {
+  display: none;
+}
+
+.tab-content {
   max-height: 0;
   transition: all 0.5s;
-  }
-  input:checked + .tab-label .test {
-      background-color: #000;
-  }
-  input:checked + .tab-label .test .minus {
-    display:block;
-      transform: rotate(180deg);
-      stroke: #fff;
-  }
-  input:checked + .tab-label .test .plus {
-    display: none;
-  }
-  input:checked + .tab-label::after {
+}
+
+input:checked+.tab-label .test {
+  background-color: #000;
+}
+
+input:checked+.tab-label .test .minus {
+  display: block;
+  transform: rotate(180deg);
+  stroke: #fff;
+}
+
+input:checked+.tab-label .test .plus {
+  display: none;
+}
+
+input:checked+.tab-label::after {
   transform: rotate(90deg);
-  }
-  input:checked ~ .tab-content {
+}
+
+input:checked~.tab-content {
   max-height: 100vh;
-  }
+}
