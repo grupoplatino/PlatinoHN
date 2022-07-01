@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
     iso_all,
     iso_motors,
@@ -74,6 +74,9 @@ function AboutUs() {
             message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         },
     ]
+    useEffect(() => {
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
     return (
         <div>
             <section className="w-full pt-24 pb-15 text-white bg-img-contact-header">
@@ -94,29 +97,31 @@ function AboutUs() {
             </section>
             <section className="container px-5 py-12 mx-auto lg:px-5 w-full">
                 <div className="grid items-center justify-between grid-cols-12 gap-3">
-                    <div className="mb-0 md:mb-6 col-span-12 md:pb-0 md:col-span-7">
-                        <p className="text-3xl">Los <span className="font-bold">productos</span> y <span className="font-bold">servicios</span> de calidad
+                    <div className="mb-0 md:mb-6 col-span-12 md:pb-0 md:col-span-12 lg:col-span-7">
+                        <p className="text-3xl text-center md:text-start">Los <span className="font-bold">productos</span> y <span className="font-bold">servicios</span> de calidad
                             que necesitas, eficientemente a tu alcance.
                         </p>
                         <br />
-                        <p>
+                        <p className="text-center md:text-start">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
                         <br />
+                        <div className="text-center mb-8 md:text-start md:mb-0">
                         <button className="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md 
                         text-white bg-orange-600 hover:bg-orange-700">
                             Registro/Iniciar Sesión
                         </button>
+                        </div>
                     </div>
-                    <div className="mb-0 md:mb-6 col-span-12 md:pb-0 md:col-span-5">
+                    <div className="mb-0 md:mb-6 col-span-12 md:pb-0 md:col-span-12 md:mx-auto lg:col-span-5">
                         <img className="w-100" src={iso_all} alt="Platino HN" />
                     </div>
                 </div>
             </section>
-            <section className="container px-5 py-12 mx-auto lg:px-5 w-full mt-10">
-                <div className="grid grid-cols-3">
+            <section className="container mt-0 px-5 py-12 mx-auto lg:px-5 w-full md:mt-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {/* opacity-50 hover:opacity-100 */}
                     {companies.map(function (item, index) {
                         return (
@@ -146,25 +151,25 @@ function AboutUs() {
                     </button>
                 </div>
             </section>
-            <section className="container px-6 py-32 mx-auto lg:px-10 w-full h-iso-gray">
+            <section className="container px-6 py-10 lg:py-32 mx-auto lg:px-10 w-full h-iso-gray">
                 <div className="grid items-center justify-between grid-cols-12 gap-3">
-                    <div className="mb-0 md:mb-6 col-span-12 md:pb-0 md:col-span-6">
-                        <p className="text-5xl">Mantén el control con <span className="font-semibold">Platino ID</span></p>
+                    <div className="mb-0 md:mb-6 col-span-12 md:pb-0 md:col-span-12 lg:col-span-6">
+                        <p className="text-2xl md:text-5xl">Mantén el control con <span className="font-semibold">Platino ID</span></p>
                         <br />
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <br />
-                        <p className="text-2xl">Asegurado con <span className="font-semibold">Stripe</span></p>
+                        <p className="text-xl md:text-2xl">Asegurado con <span className="font-semibold">Stripe</span></p>
                         <br />
                         <button className="inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-sm font-medium rounded-md 
                         text-white bg-orange-600 hover:bg-orange-700">
                             Registrarme con Platino.hn
                         </button>
                     </div>
-                    <div className="mb-0 md:mb-6 col-span-12 md:pb-0 md:col-span-6">
+                    <div className="mb-0 md:mb-6 col-span-12 md:pb-0 md:col-span-12 lg:col-span-6">
                         <div class="tabs">
                             {faq.map(function (item, index) {
                                 return (
-                                    <div class="border tab mt-3">
+                                    <div key={index} class="border tab mt-3">
                                         <div class="border-l-2 border-transparent relative">
                                             <input class="w-full absolute z-10 cursor-pointer opacity-0 h-5 top-6" type="checkbox" id="chck1" />
                                             <header class="flex justify-between items-center p-5 pl-8 pr-8 cursor-pointer select-none tab-label" for="chck1">

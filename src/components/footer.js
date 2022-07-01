@@ -66,7 +66,7 @@ function Footer() {
       <div className="container px-5 py-12 mx-auto lg:px-5">
         <div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
           <div className="grid items-center grid-cols-12 gap-3">
-            <div className="mb-0 md:mb-6 col-span-12 md:pb-0 md:col-span-5">
+            <div className="mb-0 md:mb-6 col-span-12 md:pb-0 md:col-span-12 lg:col-span-5">
               <p className="text-white text-3xl font-semibold">Contáctanos</p>
               <p className="text-white my-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -97,7 +97,7 @@ function Footer() {
                 <FaInstagramSquare size={20} className="mr-4 my-4" color="white" />
               </div>
             </div>
-            <div className="col-span-12 text-center md:text-left md:col-span-7">
+            <div className="col-span-12 text-center md:text-left md:col-span-12 lg:col-span-7">
               <div className="mt-5 md:mt-0 md:col-span-2">
                 <form action="#" method="POST">
                   <div className="shadow overflow-hidden sm:rounded-md">
@@ -175,10 +175,10 @@ function Footer() {
                         </div>
                       </div>
                     </div>
-                    <div className="px-4 pt-1 mb-8 text-left sm:px-6">
+                    <div className="px-4 pt-1 mb-8 text-center md:text-left sm:px-6">
                       <button
                         type="submit"
-                        className="inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        className="py-4 md:py-3 px-20 md:px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 focus:outline-none"
                       >
                         Enviar Mensaje
                       </button>
@@ -196,7 +196,7 @@ function Footer() {
             <div className="mx-auto">
               <LazyLoadImage effect="blur" src={logo_grupo_platino} width="180" className="p-2" />
             </div>
-            <p className="text-white text-center text-lg font-semibold">¿Quieres formar parte de nuestro equipo?</p>
+            <p className="text-white text-center text-2xl md:text-lg font-semibold">¿Quieres formar parte de nuestro equipo?</p>
             <div className="w-full flex justify-center items-center">
               <button
                 type="button"
@@ -213,7 +213,7 @@ function Footer() {
         <div className="w-full px-5 py-5">
           <div className="text-center">
             <div>
-              <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-6">
+              <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
                 {listItems.map(function (item, index) {
                   return (
                     <div key={index}>

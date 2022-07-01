@@ -11,8 +11,13 @@ import Hero from './pages/home/hero/hero';
 import Financing from './pages/financing/financing';
 import Contact from './pages/contact/contact';
 import Companies from './pages/companies/companies';
+import { useEffect } from 'react';
+
 
 function App() {
+  useEffect(() => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
   return (
     <HashRouter>
       <NavBar />
@@ -23,7 +28,7 @@ function App() {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/" element={<Hero/>}/>
       </Routes>
-      <Footer />
+      <Footer /> 
     </HashRouter>
   );
 }

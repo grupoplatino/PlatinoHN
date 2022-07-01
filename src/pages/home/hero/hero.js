@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -15,45 +15,6 @@ import financiamiento from '../../../assets/images/categories/sany.jpeg';
 function Hero() {
     const [nav1, setNav1] = useState(null);
     const [nav2, setNav2] = useState(null);
-
-    const settings = {
-        asNavFor: nav1,
-        ref: (slider2) => setNav2(slider2),
-        dots: false,
-        infinite: true,
-        slidesToShow: 8,
-        slidesToScroll: 1,
-        autoplay: true,
-        swipeToSlide: true,
-        focusOnSelect: true,
-        speed: 4000,
-        autoplaySpeed: 4000,
-        cssEase: "linear",
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
 
     const categories = [
         {
@@ -105,6 +66,9 @@ function Hero() {
             alt: "Transporte"
         },
     ]
+    useEffect(() => {
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
     return (
         <div>
             <div className="static h-100">
