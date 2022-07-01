@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .max-width-slick-item {
   max-width: 70% !important;
 }
@@ -64,4 +68,11 @@ input:checked+.tab-label::after {
 
 input:checked~.tab-content {
   max-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .h-iso-gray {
+    background-size: 450px;
+    background-position: top;
+  }
 }
