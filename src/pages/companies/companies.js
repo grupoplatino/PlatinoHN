@@ -11,6 +11,7 @@ import {
     platino_software,
     platino_usados
 } from '../../assets/index';
+import ScrollToTop from '../../utils/scroll-to-top';
 
 const Companies = () => {
     const [companyIndex, setCompanyIndex] = useState(0);
@@ -81,13 +82,13 @@ const Companies = () => {
         },
     ]
     useEffect(() => {
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+        ScrollToTop();
       }, []);
     return (
         <div>
             <div className="py-8 bg-blackCustom-900"></div>
             <div className="container mx-auto">
-                <div className="flex flex-row w-full text-center justify-center overflow-x-auto py-4">
+                <div className="flex flex-row w-full text-center lg:justify-center overflow-x-auto py-4">
                     {companies.map(function (item, index) {
                         return (
                             <p key={index} onClick={() => setCompanyIndex(index)} className={`ease-linear ${companyIndex === index ? "font-bold" : "font-semibold"} cursor-pointer transition-all duration-150 md:p-1 font-light mx-2 py-2 bg-transparent hover:font-semibold`}>
