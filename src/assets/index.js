@@ -11,6 +11,15 @@ export {default as platino_motors_white} from '../assets/images/companies/logo_m
 export {default as platino_inmobiliaria_white} from '../assets/images/companies/logo_inmobiliaria_white.svg';
 export {default as platino_logistics_white} from '../assets/images/companies/logo_logistics_white.svg';
 
+export {default as platino_capital_white_letter} from '../assets/images/companies/platino_capital_white_letter.png';
+export {default as platino_ferreteria_white_letter} from '../assets/images/companies/platino_ferreteria_white_letter.png';
+export {default as platino_repuestos_white_letter} from '../assets/images/companies/platino_repuestos_white_letter.png';
+export {default as platino_usados_white_letter} from '../assets/images/companies/platino_usados_white_letter.png';
+export {default as platino_software_white_letter} from '../assets/images/companies/platino_software_white_letter.png';
+export {default as platino_motors_white_letter} from '../assets/images/companies/platino_motors_white_letter.png';
+export {default as platino_inmobiliaria_white_letter} from '../assets/images/companies/platino_inmobiliaria_white_letter.png';
+export {default as platino_logistics_white_letter} from '../assets/images/companies/platino_logistic_white_letter.png';
+
 export {default as platino_capital} from '../assets/images/companies/platino_capital.png';
 export {default as platino_ferreteria} from '../assets/images/companies/platino_ferreteria.png';
 export {default as platino_repuestos} from '../assets/images/companies/platino_repuestos.png';
