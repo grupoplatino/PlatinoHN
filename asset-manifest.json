@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/PlatinoHN/static/css/main.18c1a5e8.css",
-    "main.js": "/PlatinoHN/static/js/main.969a5e93.js",
+    "main.css": "/PlatinoHN/static/css/main.fd5cef35.css",
+    "main.js": "/PlatinoHN/static/js/main.7b64d769.js",
+    "static/media/dashboard.png": "/PlatinoHN/static/media/dashboard.a6fd9554cdfc80bab764.png",
     "static/media/sany.jpeg": "/PlatinoHN/static/media/sany.3fdfa145cad4d8fbfde2.jpeg",
     "static/media/landing_post-venta.jpg": "/PlatinoHN/static/media/landing_post-venta.109c9291d0047a7ccd56.jpg",
     "static/media/landing_nosotros.jpg": "/PlatinoHN/static/media/landing_nosotros.2e1366ebfa0cc337a931.jpg",
@@ -54,7 +55,7 @@
     "static/media/iso_capital.svg": "/PlatinoHN/static/media/iso_capital.4657366433a895d3065c5c7c3cc6ec31.svg",
     "static/media/iso_logistics.svg": "/PlatinoHN/static/media/iso_logistics.7ed1b690ae815e272822f3a8b55a7a2d.svg",
     "static/media/iso_ferreteria.svg": "/PlatinoHN/static/media/iso_ferreteria.c7616d55c2ba5d4dfcdfa86dfdb450e1.svg",
-    "static/media/down_arrow.svg": "/PlatinoHN/static/media/down_arrow.1e276f0b4a0678e43c20086a8c606adb.svg",
+    "static/media/down_arrow.svg": "/PlatinoHN/static/media/down_arrow.32ff34aa5ec381fe7b7552c13f0d3f20.svg",
     "index.html": "/PlatinoHN/index.html",
     "static/media/right_arrow.svg": "/PlatinoHN/static/media/right_arrow.35535ab67f61a52748eeea5c27e94f1f.svg",
     "static/media/right_arrow_white.svg": "/PlatinoHN/static/media/right_arrow_white.bd696bebc052df2b482dc45363e883c2.svg",
@@ -62,11 +63,11 @@
     "static/media/open_new_tab_icon.svg": "/PlatinoHN/static/media/open_new_tab_icon.2317b40cc7ccb3d04883e35f534ae1b8.svg",
     "static/media/right_arrow_black.svg": "/PlatinoHN/static/media/right_arrow_black.146ded2110477f7ba9d8c4f4eee73987.svg",
     "static/media/linkedin_icon.svg": "/PlatinoHN/static/media/linkedin_icon.9960d005bbffe9dbd9d2e4a0c0b28573.svg",
-    "main.18c1a5e8.css.map": "/PlatinoHN/static/css/main.18c1a5e8.css.map",
-    "main.969a5e93.js.map": "/PlatinoHN/static/js/main.969a5e93.js.map"
+    "main.fd5cef35.css.map": "/PlatinoHN/static/css/main.fd5cef35.css.map",
+    "main.7b64d769.js.map": "/PlatinoHN/static/js/main.7b64d769.js.map"
   },
   "entrypoints": [
-    "static/css/main.18c1a5e8.css",
-    "static/js/main.969a5e93.js"
+    "static/css/main.fd5cef35.css",
+    "static/js/main.7b64d769.js"
   ]
 }
