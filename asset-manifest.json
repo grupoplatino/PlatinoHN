@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PlatinoHN/static/css/main.7de68be8.css",
-    "main.js": "/PlatinoHN/static/js/main.679b304e.js",
+    "main.css": "/PlatinoHN/static/css/main.2b126300.css",
+    "main.js": "/PlatinoHN/static/js/main.3cbcc522.js",
     "static/media/sany.jpeg": "/PlatinoHN/static/media/sany.3fdfa145cad4d8fbfde2.jpeg",
     "static/media/landing_post-venta.jpg": "/PlatinoHN/static/media/landing_post-venta.109c9291d0047a7ccd56.jpg",
     "static/media/landing_nosotros.jpg": "/PlatinoHN/static/media/landing_nosotros.2e1366ebfa0cc337a931.jpg",
@@ -62,11 +62,11 @@
     "static/media/open_new_tab_icon.svg": "/PlatinoHN/static/media/open_new_tab_icon.2317b40cc7ccb3d04883e35f534ae1b8.svg",
     "static/media/right_arrow_black.svg": "/PlatinoHN/static/media/right_arrow_black.146ded2110477f7ba9d8c4f4eee73987.svg",
     "static/media/linkedin_icon.svg": "/PlatinoHN/static/media/linkedin_icon.9960d005bbffe9dbd9d2e4a0c0b28573.svg",
-    "main.7de68be8.css.map": "/PlatinoHN/static/css/main.7de68be8.css.map",
-    "main.679b304e.js.map": "/PlatinoHN/static/js/main.679b304e.js.map"
+    "main.2b126300.css.map": "/PlatinoHN/static/css/main.2b126300.css.map",
+    "main.3cbcc522.js.map": "/PlatinoHN/static/js/main.3cbcc522.js.map"
   },
   "entrypoints": [
-    "static/css/main.7de68be8.css",
-    "static/js/main.679b304e.js"
+    "static/css/main.2b126300.css",
+    "static/js/main.3cbcc522.js"
   ]
 }
