@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../home.css";
 import Slider from "react-slick";
 import clasificados from '../../../assets/images/categories/clasificados.svg';
 import ferreteria from '../../../assets/images/categories/ferreteriia.svg';
@@ -23,20 +24,27 @@ import {
     platino_software_white_letter,
     platino_usados_white_letter
 } from '../../../assets/index';
+import ScrollToTop from "../../../utils/scroll-to-top";
+
 function Hero() {
     const [nav1, setNav1] = useState();
     const [nav2, setNav2] = useState();
-    console.log(nav1);
-    console.log(nav2);
+
+    const bgSettings = {
+        dots: false,
+        speed: 1000,
+        cssEase: "linear",
+    }
+
     const settings = {
         dots: false,
         infinite: true,
-        slidesToShow: 6,
+        slidesToShow: 8,
         slidesToScroll: 1,
         autoplay: false,
         arrows: false,
         speed: 2000,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 1000,
         cssEase: "linear",
         responsive: [
             {
@@ -162,51 +170,54 @@ function Hero() {
         },
     ]
     useEffect(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        ScrollToTop();
     }, []);
     return (
         <div>
-            <Slider asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
-                {categories.map(function (item, index) {
-                    return (
-                        <div key={index}>
-                            <div>
-                                <img className="h-screen w-screen absolute -z-20" src={item.bg_company} alt="Platino HN" />
-                            </div>
-                            <div className="container h-screen w-6/12 items-center flex text-white mx-auto">
-                                <div className="mb-36">
-                                    <img src={item.logo_company} alt="Motors" className="mt-4" />
-                                    <div className="text-center mt-6">
-                                        <p>{item.desc_company}</p>
-                                    </div>
-                                    <div className="flex mt-4 justify-center">
-                                        <button className={`mb-4 mt-2 mx-2 inline-flex items-center justify-center py-3 px-12 border border-transparent shadow-sm text-sm font-medium rounded-md 
-                            text-white bg-gradient-to-r ${item.fromColor + " " + item.toColor}`}>
-                                            Visitar {item.company}
-                                        </button>
-                                        <button className="mb-4 mt-2 mx-2 inline-flex items-center justify-center py-3 px-12 border border-transparent shadow-sm text-sm font-medium rounded-md 
-                            text-white border-white">
-                                            Más Información
-                                        </button>
+            <div className="carousel">
+                <Slider {...bgSettings} sNavFor={nav2} ref={(slider1) => setNav1(slider1)} prevArrow={<PreviousBtn />}
+                    nextArrow={<NextBtn />}>
+                    {categories.map(function (item, index) {
+                        return (
+                            <div key={index}>
+                                <div>
+                                    <img className="h-screen w-screen object-cover absolute -z-20" src={item.bg_company} alt="Platino HN" />
+                                </div>
+                                <div className="container h-screen w-10/12 sm:w-8/12 lg:w-6/12 items-center flex text-white mx-auto">
+                                    <div className="mb-36">
+                                        <img src={item.logo_company} alt="Motors" className="mt-4" />
+                                        <div className="text-center mt-6">
+                                            <p>{item.desc_company}</p>
+                                        </div>
+                                        <div className="gid grid-cols-1 lg:grid-cols-2 mt-4 text-center">
+                                            <button className={`mb-4 mt-2 mx-2 inline-flex items-center justify-center py-3 px-12 border border-transparent shadow-sm text-sm font-medium rounded-md 
+                                            text-white bg-gradient-to-r ${item.fromColor + " " + item.toColor}`}>
+                                                Visitar {item.company}
+                                            </button>
+                                            <button className="mb-4 mt-2 mx-2 inline-flex items-center justify-center py-3 px-12 border border-transparent shadow-sm text-sm font-medium rounded-md 
+                                            text-white border-white">
+                                                Más Información
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    )
-                })}
-            </Slider>
-            <div className="container absolute bottom-10 left-0 right-0 mx-auto px-5 py-5">
+                        )
+                    })}
+                </Slider>
+            </div>
+            <div className="container absolute bottom-10 sm:bottom-0 left-0 right-0 mx-auto px-5 py-5">
                 <div className="text-center">
-                    <div className="px-5">
+                    <div className="px-0 lg:px-5">
                         <Slider asNavFor={nav1} focusOnSelect={true}
                             ref={(slider2) => setNav2(slider2)} {...settings} className="w-full">
                             {categories.map(function (item, index) {
                                 return (
                                     <div className="text-center" key={index}>
-                                        <img className="h-24 w-20 mx-auto"
+                                        <img className="h-12 lg:h-14 mx-auto"
                                             src={item.logo}
                                             alt={item.alt} />
-                                        <p className="text-white font-semibold mt-2">
+                                        <p className="text-white font-semibold mt-4">
                                             {item.title}
                                         </p>
                                     </div>
@@ -219,5 +230,30 @@ function Hero() {
         </div>
     );
 }
+
+const PreviousBtn = (props) => {
+    const { className, onClick } = props;
+    return (
+        <div className={className} onClick={onClick}>
+            <div className="bg-white rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="#3c4963" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </div>
+        </div>
+    );
+};
+const NextBtn = (props) => {
+    const { className, onClick } = props;
+    return (
+        <div className={className} onClick={onClick}>
+            <div className="bg-white rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="#3c4963" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </div>
+        </div>
+    );
+};
 
 export default Hero;

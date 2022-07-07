@@ -39,3 +39,13 @@ export {default as iso_motors} from '../assets/images/iso/iso_motors.svg';
 export {default as iso_inmobiliaria} from '../assets/images/iso/iso_inmobiliaria.svg';
 export {default as iso_logistics} from '../assets/images/iso/iso_logistics.svg';
 export {default as iso_all} from '../assets/images/iso/icons.svg';
+
+//Icon
+export {default as OpenNewTabIcon} from '../assets/images/icons/open_new_tab_icon.svg';
+export {default as LinkedinIcon} from '../assets/images/icons/linkedin_icon.svg';
+export{default as RightArrowBlack} from '../assets/images/icons/right_arrow_black.svg';
+export{default as DownArrow} from '../assets/images/icons/down_arrow.svg';
+
+//Brand
+export {default as PostVenta} from '../assets/images/categories/landing_post-venta.jpg';
+export {default as Dashboard} from '../assets/images/categories/dashboard.png';

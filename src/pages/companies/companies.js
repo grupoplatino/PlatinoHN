@@ -83,26 +83,31 @@ const Companies = () => {
     ]
     useEffect(() => {
         ScrollToTop();
-      }, []);
+    }, []);
     return (
         <div>
             <div className="py-8 bg-blackCustom-900"></div>
             <div className="container mx-auto">
-                <div className="flex flex-row w-full text-center lg:justify-center overflow-x-auto py-4">
+                <div className="flex flex-row w-full text-center overflow-x-auto py-4">
                     {companies.map(function (item, index) {
                         return (
-                            <p key={index} onClick={() => setCompanyIndex(index)} className={`ease-linear ${companyIndex === index ? "font-bold" : "font-semibold"} cursor-pointer transition-all duration-150 md:p-1 font-light mx-2 py-2 bg-transparent hover:font-semibold`}>
-                                {item.title}
-                            </p>
+                            <div key={index} onClick={() => setCompanyIndex(index)}>
+                                <p className={`ease-linear ${companyIndex === index ? "font-bold" : "font-semibold"}  w-max cursor-pointer transition-all duration-150 md:p-1 font-light mx-2 py-2 bg-transparent hover:font-semibold`}>
+                                    {item.title}
+                                </p>
+                            </div>
                         )
                     })}
                 </div>
             </div>
             <div className={`py-1 bg-gradient-to-r ${`${companies[companyIndex].fromColor + " " + companies[companyIndex].toColor}`}`}></div>
-            <div>
-                <img src={companies[companyIndex].bg} alt="Platno HN" className="w-screen" />
+            <div className="hidden lg:block">
+                <img src={companies[companyIndex].bg} alt="Platno HN" className="w-screen" style={{"height":"85vh"}} />
             </div>
-            <div className="container mx-auto px-8 block md:block lg:hidden">
+            <div className="block lg:hidden">
+                <img src={companies[companyIndex].bg} alt="Platno HN" className="w-screen"/>
+            </div>
+            <div className="container mx-auto px-8 py-5 block md:block lg:hidden">
                 <img src={companies[companyIndex].logo} alt="Motors" className="mt-4" />
                 <p className="my-4 leading-6">{companies[companyIndex].desc}</p>
                 <button className="mb-4 mt-2 inline-flex items-center justify-center py-3 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md 
@@ -114,7 +119,7 @@ const Companies = () => {
                 </button>
             </div>
             <div className="h-screen items-center absolute hidden lg:block lg:top-1/4 xl:top-1/3 left-20">
-                <div className="bg-white px-10 py-5 my-auto rounded-lg w-1/3">
+                <div className="bg-white px-10 py-5 my-auto rounded-lg w-1/3 landscape:w-7/12">
                     <img src={companies[companyIndex].logo} alt="Motors" className="mt-4" />
                     <p className="my-4 leading-6">{companies[companyIndex].desc}</p>
                     <button className="mb-4 mt-2 inline-flex items-center justify-center py-3 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md 

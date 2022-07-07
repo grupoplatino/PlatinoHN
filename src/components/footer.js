@@ -213,7 +213,7 @@ function Footer() {
         <div className="w-full px-5 py-5">
           <div className="text-center">
             <div>
-              <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+              <div className="w-full grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-6">
                 {listItems.map(function (item, index) {
                   return (
                     <div key={index}>

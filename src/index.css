@@ -35,6 +35,13 @@ html {
   background-position: left;
 }
 
+.financingHero {
+  background-image: url("../src/assets/images/categories/landing_nosotros.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .tab {
   overflow: hidden;
 }
@@ -69,6 +76,7 @@ input:checked+.tab-label::after {
 input:checked~.tab-content {
   max-height: 100vh;
 }
+
 
 @media (max-width: 768px) {
   .h-iso-gray {
