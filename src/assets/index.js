@@ -11,6 +11,15 @@ export {default as platino_motors_white} from '../assets/images/companies/logo_m
 export {default as platino_inmobiliaria_white} from '../assets/images/companies/logo_inmobiliaria_white.svg';
 export {default as platino_logistics_white} from '../assets/images/companies/logo_logistics_white.svg';
 
+export {default as platino_capital_white_letter} from '../assets/images/companies/platino_capital_white_letter.png';
+export {default as platino_ferreteria_white_letter} from '../assets/images/companies/platino_ferreteria_white_letter.png';
+export {default as platino_repuestos_white_letter} from '../assets/images/companies/platino_repuestos_white_letter.png';
+export {default as platino_usados_white_letter} from '../assets/images/companies/platino_usados_white_letter.png';
+export {default as platino_software_white_letter} from '../assets/images/companies/platino_software_white_letter.png';
+export {default as platino_motors_white_letter} from '../assets/images/companies/platino_motors_white_letter.png';
+export {default as platino_inmobiliaria_white_letter} from '../assets/images/companies/platino_inmobiliaria_white_letter.png';
+export {default as platino_logistics_white_letter} from '../assets/images/companies/platino_logistic_white_letter.png';
+
 export {default as platino_capital} from '../assets/images/companies/platino_capital.png';
 export {default as platino_ferreteria} from '../assets/images/companies/platino_ferreteria.png';
 export {default as platino_repuestos} from '../assets/images/companies/platino_repuestos.png';
@@ -30,3 +39,13 @@ export {default as iso_motors} from '../assets/images/iso/iso_motors.svg';
 export {default as iso_inmobiliaria} from '../assets/images/iso/iso_inmobiliaria.svg';
 export {default as iso_logistics} from '../assets/images/iso/iso_logistics.svg';
 export {default as iso_all} from '../assets/images/iso/icons.svg';
+
+//Icon
+export {default as OpenNewTabIcon} from '../assets/images/icons/open_new_tab_icon.svg';
+export {default as LinkedinIcon} from '../assets/images/icons/linkedin_icon.svg';
+export{default as RightArrowBlack} from '../assets/images/icons/right_arrow_black.svg';
+export{default as DownArrow} from '../assets/images/icons/down_arrow.svg';
+
+//Brand
+export {default as PostVenta} from '../assets/images/categories/landing_post-venta.jpg';
+export {default as Dashboard} from '../assets/images/categories/dashboard.png';

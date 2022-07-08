@@ -1,0 +1,69 @@
+.carousel .slick-arrow.slick-prev,
+.carousel .slick-arrow.slick-next {
+    background: none;
+    width: 100px;
+    height: 104px;
+    display: flex;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.carousel .slick-prev {
+    left: 0;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.carousel .slick-next {
+    right: 0;
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    .carousel .slick-arrow.slick-next,
+    .carousel .slick-arrow.slick-prev {
+        display: none;
+    }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+    .carousel .slick-prev {
+        left: 5%;
+    }
+    
+    .carousel .slick-next {
+        right: 5%;
+    }
+}
+
+
+@media only screen 
+and (min-width : 1224px) {
+    .carousel .slick-prev {
+        left: 15%;
+    }
+    
+    .carousel .slick-next {
+        right: 15%;
+    }
+}

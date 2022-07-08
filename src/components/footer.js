@@ -1,6 +1,6 @@
 import React from "react";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import {
   logo_grupo_platino,
   platino_capital_white,
@@ -11,12 +11,12 @@ import {
   platino_repuestos_white,
   platino_software_white,
   platino_usados_white
-} from '../assets/index';
-import { ImFacebook2 } from 'react-icons/im';
-import { IoLogoWhatsapp } from 'react-icons/io';
-import { FaInstagramSquare, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
-import arrow_white from '../assets/images/icons/right_arrow_white.svg'
+} from "../assets/index";
+import { ImFacebook2 } from "react-icons/im";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { FaInstagramSquare, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import arrow_white from "../assets/images/icons/right_arrow_white.svg"
 
 function Footer() {
   const listItems = [
@@ -104,7 +104,7 @@ function Footer() {
                     <div className="px-0 md:px-4 lg:px-6 py-5 sm:p-6">
                       <div className="grid grid-cols-6 gap-6">
                         <div className="col-span-6 sm:col-span-3">
-                          <label htmlFor="first-name" className="text-start block mb-2 text-sm font-medium text-white">
+                          <label className="text-start block mb-2 text-sm font-medium text-white">
                             First name
                           </label>
                           <input
@@ -118,7 +118,7 @@ function Footer() {
                         </div>
 
                         <div className="col-span-6 sm:col-span-3">
-                          <label htmlFor="last-name" className="text-start block mb-2 text-sm font-medium text-white">
+                          <label className="text-start block mb-2 text-sm font-medium text-white">
                             Last name
                           </label>
                           <input
@@ -132,7 +132,7 @@ function Footer() {
                         </div>
 
                         <div className="col-span-6 sm:col-span-3">
-                          <label htmlFor="email-address" className="text-start block mb-2 text-sm font-medium text-white">
+                          <label className="text-start block mb-2 text-sm font-medium text-white">
                             Email address
                           </label>
                           <input
@@ -146,7 +146,7 @@ function Footer() {
                         </div>
 
                         <div className="col-span-6 sm:col-span-3">
-                          <label htmlFor="phone-number" className="text-start block mb-2 text-sm font-medium text-white">
+                          <label className="text-start block mb-2 text-sm font-medium text-white">
                             Phone Number
                           </label>
                           <input
@@ -160,7 +160,7 @@ function Footer() {
                         </div>
 
                         <div className="col-span-6">
-                          <label htmlFor="message" className="text-start block mb-2 text-sm font-medium text-white">
+                          <label className="text-start block mb-2 text-sm font-medium text-white">
                             Message
                           </label>
                           <textarea
@@ -191,7 +191,7 @@ function Footer() {
         </div>
         <hr />
         <br />
-        <div class="flex justify-center w-full">
+        <div className="flex justify-center w-full">
           <div className="flex flex-col">
             <div className="mx-auto">
               <LazyLoadImage effect="blur" src={logo_grupo_platino} width="180" className="p-2" />
@@ -213,7 +213,7 @@ function Footer() {
         <div className="w-full px-5 py-5">
           <div className="text-center">
             <div>
-              <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+              <div className="w-full grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-6">
                 {listItems.map(function (item, index) {
                   return (
                     <div key={index}>

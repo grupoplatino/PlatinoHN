@@ -1,8 +1,14 @@
 import React from 'react';
+import FinancingHero from './components/financing-hero';
+import StepsToFinancing from './components/steps-to-financing';
 
 function Financing() {
-    return ( <>
-    <div className="py-24 px-60 bg-slate-600 text-3xl">Financiamiento</div></> );
+    return (
+        <div>
+            <FinancingHero/>
+            <StepsToFinancing/>
+        </div>
+    );
 }
 
 export default Financing;

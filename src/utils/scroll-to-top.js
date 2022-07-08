@@ -1,16 +1,6 @@
-import React, { useEffect, Fragment } from 'react';
 
-function ScrollToTop({ history, children }) {
-  useEffect(() => {
-    const unlisten = history.listen(() => {
-      window.scrollTo(0, 0);
-    });
-    return () => {
-      unlisten();
-    }
-  }, []);
-
-  return <Fragment>{children}</Fragment>;
+function ScrollToTop() {
+  return window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
 }
 
 export default ScrollToTop;
