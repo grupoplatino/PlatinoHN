@@ -1,19 +1,19 @@
-import 'react-lazy-load-image-component/src/effects/blur.css';
-import { Dashboard } from '../../../assets';
+import "react-lazy-load-image-component/src/effects/blur.css";
+import { Dashboard } from "../../../assets";
 
 const Services = () => {
     const metrics = [
-        { id: 1, stat: '8K+', emphasis: 'Companies', rest: 'use laoreet amet lacus nibh integer quis.' },
-        { id: 2, stat: '25K+', emphasis: 'Countries around the globe', rest: 'lacus nibh integer quis.' },
-        { id: 3, stat: '98%', emphasis: 'Customer satisfaction', rest: 'laoreet amet lacus nibh integer quis.' },
-        { id: 4, stat: '12M+', emphasis: 'Issues resolved', rest: 'lacus nibh integer quis.' },
+        { id: 1, stat: "8K+", emphasis: "Companies", rest: "use laoreet amet lacus nibh integer quis." },
+        { id: 2, stat: "25K+", emphasis: "Countries around the globe", rest: "lacus nibh integer quis." },
+        { id: 3, stat: "98%", emphasis: "Customer satisfaction", rest: "laoreet amet lacus nibh integer quis." },
+        { id: 4, stat: "12M+", emphasis: "Issues resolved", rest: "lacus nibh integer quis." },
     ]
     return (
         <div>
             <div className="bg-white">
-                <div className="max-w-full mx-auto">
-                    <div className="bg-gray-50 overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
-                        <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
+                <div className="container mx-auto">
+                    <div className="overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
+                        <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-8">
                             <div className="lg:self-center">
                                 <h2 className="text-3xl font-extrabold text-gray-800 sm:text-4xl">
                                     <span className="block">Ready to dive in?</span>
@@ -24,7 +24,7 @@ const Services = () => {
                                     nec.
                                 </p>
                                 <a
-                                    href="#"
+                                    href="/#"
                                     className="mt-8 bg-orange-600 border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-white"
                                 >
                                     Sign up for free
@@ -57,7 +57,7 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
                     <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
                         <h2 className="text-sm font-semibold text-orange-600 tracking-wide uppercase">Valuable Metrics</h2>
                         <p className="mt-3 text-3xl font-extrabold text-white">

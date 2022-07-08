@@ -1,4 +1,4 @@
-import arrow from '../../../assets/images/icons/right_arrow.svg'
+import arrow from "../../../assets/images/icons/right_arrow.svg"
 
 function Companies(props) {
     let data = Array.from(props.companies)

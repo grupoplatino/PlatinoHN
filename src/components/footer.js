@@ -1,6 +1,6 @@
 import React from "react";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import {
   logo_grupo_platino,
   platino_capital_white,
@@ -11,12 +11,12 @@ import {
   platino_repuestos_white,
   platino_software_white,
   platino_usados_white
-} from '../assets/index';
-import { ImFacebook2 } from 'react-icons/im';
-import { IoLogoWhatsapp } from 'react-icons/io';
-import { FaInstagramSquare, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
-import arrow_white from '../assets/images/icons/right_arrow_white.svg'
+} from "../assets/index";
+import { ImFacebook2 } from "react-icons/im";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { FaInstagramSquare, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import arrow_white from "../assets/images/icons/right_arrow_white.svg"
 
 function Footer() {
   const listItems = [

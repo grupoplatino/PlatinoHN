@@ -3,16 +3,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../home.css";
 import Slider from "react-slick";
-import clasificados from '../../../assets/images/categories/clasificados.svg';
-import ferreteria from '../../../assets/images/categories/ferreteriia.svg';
-import financiera from '../../../assets/images/categories/financiera.svg';
-import marketplace from '../../../assets/images/categories/marketplace.svg';
-import motors from '../../../assets/images/categories/motors.svg';
-import realestate from '../../../assets/images/categories/realestate.svg';
-import repuestos from '../../../assets/images/categories/repuestos.svg';
-import transporte from '../../../assets/images/categories/transporte.svg';
-import financiamiento from '../../../assets/images/categories/sany.jpeg';
-import bg_item from '../../../assets/images/categories/landing_nosotros.jpg';
+import clasificados from "../../../assets/images/categories/clasificados.svg";
+import ferreteria from "../../../assets/images/categories/ferreteriia.svg";
+import financiera from "../../../assets/images/categories/financiera.svg";
+import marketplace from "../../../assets/images/categories/marketplace.svg";
+import motors from "../../../assets/images/categories/motors.svg";
+import realestate from "../../../assets/images/categories/realestate.svg";
+import repuestos from "../../../assets/images/categories/repuestos.svg";
+import transporte from "../../../assets/images/categories/transporte.svg";
+import financiamiento from "../../../assets/images/categories/sany.jpeg";
+import bg_item from "../../../assets/images/categories/landing_nosotros.jpg";
 
 import {
     platino_capital_white_letter,
@@ -23,7 +23,7 @@ import {
     platino_repuestos_white_letter,
     platino_software_white_letter,
     platino_usados_white_letter
-} from '../../../assets/index';
+} from "../../../assets/index";
 import ScrollToTop from "../../../utils/scroll-to-top";
 
 function Hero() {
@@ -185,8 +185,8 @@ function Hero() {
                                 </div>
                                 <div className="container h-screen w-10/12 sm:w-8/12 lg:w-6/12 items-center flex text-white mx-auto">
                                     <div className="mb-36">
-                                        <img src={item.logo_company} alt="Motors" className="mt-4" />
-                                        <div className="text-center mt-6">
+                                        <img src={item.logo_company} alt="Motors" className="mt-4 xl:w-3/5 xl:mx-auto" />
+                                        <div className="text-center mt-6 2xl:px-20">
                                             <p>{item.desc_company}</p>
                                         </div>
                                         <div className="gid grid-cols-1 lg:grid-cols-2 mt-4 text-center">
@@ -206,7 +206,7 @@ function Hero() {
                     })}
                 </Slider>
             </div>
-            <div className="container absolute bottom-10 sm:bottom-0 left-0 right-0 mx-auto px-5 py-5">
+            <div className="container absolute bottom-10 sm:bottom-0 xl:bottom-5 2xl:bottom-16 left-0 right-0 mx-auto px-5 py-5">
                 <div className="text-center">
                     <div className="px-0 lg:px-5">
                         <Slider asNavFor={nav1} focusOnSelect={true}
@@ -236,7 +236,7 @@ const PreviousBtn = (props) => {
     return (
         <div className={className} onClick={onClick}>
             <div className="bg-white rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="#3c4963" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 2xl:h-9 2xl:w-9" fill="#3c4963" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                 </svg>
             </div>
@@ -248,7 +248,7 @@ const NextBtn = (props) => {
     return (
         <div className={className} onClick={onClick}>
             <div className="bg-white rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="#3c4963" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 2xl:h-9 2xl:w-9" fill="#3c4963" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
             </div>

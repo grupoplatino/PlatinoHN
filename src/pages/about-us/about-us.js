@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect} from "react";
 import {
     iso_all,
     iso_motors,
@@ -9,12 +9,12 @@ import {
     iso_software,
     iso_inmobiliaria,
     iso_logistics
-  } from '../../assets/index';
-import Head from './components/head';
-import Services from './components/services';
-import Companies from './components/companies';
-import Faq from './components/faq';
-import ScrollToTop from '../../utils/scroll-to-top';
+  } from "../../assets/index";
+import Head from "./components/head";
+import Services from "./components/services";
+import Companies from "./components/companies";
+import Faq from "./components/faq";
+import ScrollToTop from "../../utils/scroll-to-top";
 
 function AboutUs() {
     const list_companies = [

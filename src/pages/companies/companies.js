@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import bg_item from '../../assets/images/categories/landing_nosotros.jpg';
-import arrow_orange from '../../assets/images/icons/right_arrow_orange.svg'
+import React, { useState, useEffect } from "react";
+import bg_item from "../../assets/images/categories/landing_nosotros.jpg";
+import arrow_orange from "../../assets/images/icons/right_arrow_orange.svg"
 import {
     platino_capital,
     platino_ferreteria,
@@ -10,8 +10,8 @@ import {
     platino_repuestos,
     platino_software,
     platino_usados
-} from '../../assets/index';
-import ScrollToTop from '../../utils/scroll-to-top';
+} from "../../assets/index";
+import ScrollToTop from "../../utils/scroll-to-top";
 
 const Companies = () => {
     const [companyIndex, setCompanyIndex] = useState(0);
@@ -88,7 +88,7 @@ const Companies = () => {
         <div>
             <div className="py-8 bg-blackCustom-900"></div>
             <div className="container mx-auto">
-                <div className="flex flex-row w-full text-center overflow-x-auto py-4">
+                <div className="flex flex-row w-full text-center overflow-x-auto py-4 2xl:justify-center">
                     {companies.map(function (item, index) {
                         return (
                             <div key={index} onClick={() => setCompanyIndex(index)}>
@@ -118,9 +118,9 @@ const Companies = () => {
                     </span>
                 </button>
             </div>
-            <div className="h-screen items-center absolute hidden lg:block lg:top-1/4 xl:top-1/3 left-20">
-                <div className="bg-white px-10 py-5 my-auto rounded-lg w-1/3 landscape:w-7/12">
-                    <img src={companies[companyIndex].logo} alt="Motors" className="mt-4" />
+            <div className="h-screen items-center absolute hidden lg:block lg:top-1/4 xl:top-1/3 left-20 xl:left-40">
+                <div className="bg-white px-10 py-5 my-auto rounded-lg w-1/3 xl:w-2/5 2xl:w-2/5">
+                    <img src={companies[companyIndex].logo} alt="Motors" className="mt-4 2xl:w-3/5" />
                     <p className="my-4 leading-6">{companies[companyIndex].desc}</p>
                     <button className="mb-4 mt-2 inline-flex items-center justify-center py-3 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md 
                         text-orange-600 border-orange-600">
@@ -131,7 +131,7 @@ const Companies = () => {
                     </button>
                 </div>
             </div>
-            <div className="h-screen absolute items-center hidden lg:flex lg:top-5 xl:top-20 right-20">
+            <div className="h-screen absolute items-center hidden lg:flex lg:top-5 xl:top-20 right-20 xl:right-40 2xl:top-14">
                 <div className="bg-transparent">
                     <div>
                         {companies.map(function (item, index) {
