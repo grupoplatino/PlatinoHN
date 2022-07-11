@@ -113,7 +113,7 @@ function Footer() {
                             id="first-name"
                             placeholder="First name"
                             autoComplete="given-name"
-                            className="py-1 px-2 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
+                            className="py-1 text-white px-4 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
                           />
                         </div>
 
@@ -127,7 +127,7 @@ function Footer() {
                             id="last-name"
                             placeholder="Last name"
                             autoComplete="family-name"
-                            className="py-1 px-2 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
+                            className="py-1 text-white px-4 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
                           />
                         </div>
 
@@ -141,7 +141,7 @@ function Footer() {
                             id="email-address"
                             placeholder="Email"
                             autoComplete="email"
-                            className="py-1 px-2 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
+                            className="py-1 text-white px-4 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
                           />
                         </div>
 
@@ -155,7 +155,7 @@ function Footer() {
                             id="phone-number"
                             placeholder="Phone Number"
                             autoComplete="phone-number"
-                            className="py-1 px-2 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
+                            className="py-1 text-white px-4 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
                           />
                         </div>
 
@@ -170,7 +170,7 @@ function Footer() {
                             id="message"
                             placeholder="Message"
                             autoComplete="message"
-                            className="py-1 px-2 bg-transparent text-white pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
+                            className="py-1 text-white px-4 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
                           />
                         </div>
                       </div>

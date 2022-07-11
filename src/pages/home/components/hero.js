@@ -29,10 +29,11 @@ import ScrollToTop from "../../../utils/scroll-to-top";
 function Hero() {
     const [nav1, setNav1] = useState();
     const [nav2, setNav2] = useState();
+    const [itemIndex, setItemIndex] = useState(0);
 
     const bgSettings = {
         dots: false,
-        speed: 1000,
+        speed: 500,
         cssEase: "linear",
     }
 
@@ -213,11 +214,11 @@ function Hero() {
                             ref={(slider2) => setNav2(slider2)} {...settings} className="w-full">
                             {categories.map(function (item, index) {
                                 return (
-                                    <div className="text-center" key={index}>
+                                    <div onClick={()=> setItemIndex(index)} className="text-center" key={index}>
                                         <img className="h-12 lg:h-14 mx-auto"
                                             src={item.logo}
                                             alt={item.alt} />
-                                        <p className="text-white font-semibold mt-4">
+                                        <p className={`text-white ${index === itemIndex ? "font-bold text-lg": "font-normal"} mt-4`}>
                                             {item.title}
                                         </p>
                                     </div>
@@ -256,4 +257,4 @@ const NextBtn = (props) => {
     );
 };
 
-export default Hero;
+export default Hero;                                    

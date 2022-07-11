@@ -5,17 +5,18 @@ import {
   HashRouter,
   Routes
 } from "react-router-dom";
-import Financing from './pages/financing/financing';
 import Contact from './pages/contact/contact';
 import { useEffect } from 'react';
 import { AboutUsPage } from './pages/about-us';
 import { CompaniesPage } from './pages/companies';
 import { HomePage } from './pages/home';
+import { FinancingPage } from './pages/financing';
+import ScrollToTop from './utils/scroll-to-top';
 
 
 function App() {
   useEffect(() => {
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    ScrollToTop();
   }, []);
   return (
     <HashRouter>
@@ -23,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/aboutUs" element={<AboutUsPage/>}/>
         <Route path="/companies" element={<CompaniesPage/>}/>
-        <Route path="/financing" element={<Financing/>}/>
+        <Route path="/financing" element={<FinancingPage/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/" element={<HomePage/>}/>
       </Routes>

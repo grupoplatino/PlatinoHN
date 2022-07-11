@@ -30,7 +30,7 @@ const Companies = () => {
             desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
             fromColor: "from-cyan-600",
             toColor: "to-cyan-900",
-            bg: "https://images.pexels.com/photos/5637555/pexels-photo-5637555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            bg: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         },
         {
             title: "Platino Capital",
@@ -38,7 +38,7 @@ const Companies = () => {
             desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
             fromColor: "from-emerald-600",
             toColor: "to-emerald-900",
-            bg: bg_item
+            bg: "https://images.pexels.com/photos/11742808/pexels-photo-11742808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         },
         {
             title: "Platino Ferreteria",
@@ -46,7 +46,7 @@ const Companies = () => {
             desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
             fromColor: "from-orange-400",
             toColor: "to-orange-600",
-            bg: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            bg: "https://images.pexels.com/photos/1029243/pexels-photo-1029243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         },
         {
             title: "Trasportes Platino",
@@ -68,17 +68,17 @@ const Companies = () => {
             title: "Platino Repuestos",
             logo: platino_repuestos,
             desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-            fromColor: "from-cyan-600",
-            toColor: "to-cyan-900",
+            fromColor: "from-blue-600",
+            toColor: "to-blue-900",
             bg: bg_item
         },
         {
             title: "Inmobiliaria Platino",
             logo: platino_inmobiliaria,
             desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-            fromColor: "from-violet-600",
-            toColor: "to-violet-900",
-            bg: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            fromColor: "from-purple-600",
+            toColor: "to-purple-900",
+            bg: "https://images.pexels.com/photos/2111763/pexels-photo-2111763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         },
     ]
     useEffect(() => {
@@ -102,10 +102,10 @@ const Companies = () => {
             </div>
             <div className={`py-1 bg-gradient-to-r ${`${companies[companyIndex].fromColor + " " + companies[companyIndex].toColor}`}`}></div>
             <div className="hidden lg:block">
-                <img src={companies[companyIndex].bg} alt="Platno HN" className="w-screen" style={{"height":"85vh"}} />
+                <img src={companies[companyIndex].bg} alt="Platno HN" className="w-screen" style={{ "height": "85vh" }} />
             </div>
             <div className="block lg:hidden">
-                <img src={companies[companyIndex].bg} alt="Platno HN" className="w-screen"/>
+                <img src={companies[companyIndex].bg} alt="Platno HN" className="w-screen" />
             </div>
             <div className="container mx-auto px-8 py-5 block md:block lg:hidden">
                 <img src={companies[companyIndex].logo} alt="Motors" className="mt-4" />
@@ -118,27 +118,30 @@ const Companies = () => {
                     </span>
                 </button>
             </div>
-            <div className="h-screen items-center absolute hidden lg:block lg:top-1/4 xl:top-1/3 left-20 xl:left-40">
-                <div className="bg-white px-10 py-5 my-auto rounded-lg w-1/3 xl:w-2/5 2xl:w-2/5">
-                    <img src={companies[companyIndex].logo} alt="Motors" className="mt-4 2xl:w-3/5" />
-                    <p className="my-4 leading-6">{companies[companyIndex].desc}</p>
-                    <button className="mb-4 mt-2 inline-flex items-center justify-center py-3 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md 
+
+            <div className="h-screen items-center absolute hidden lg:block lg:top-1/4 xl:top-1/3 left-0">
+                <div className="flex justify-around items-center">
+                    <div className="bg-white px-10 py-5 my-auto rounded-lg w-1/3 lg:w-2/4 xl:w-2/5 2xl:w-1/3">
+                        <img src={companies[companyIndex].logo} alt="Motors" className="mt-4 2xl:w-3/5" />
+                        <p className="my-4 leading-6">{companies[companyIndex].desc}</p>
+                        <button className="mb-4 mt-2 inline-flex items-center justify-center py-3 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md 
                         text-orange-600 border-orange-600">
-                        Visita {companies[companyIndex].title}
-                        <span>
-                            <img src={arrow_orange} alt="Platino HN" className="h-4 ml-2" />
-                        </span>
-                    </button>
-                </div>
-            </div>
-            <div className="h-screen absolute items-center hidden lg:flex lg:top-5 xl:top-20 right-20 xl:right-40 2xl:top-14">
-                <div className="bg-transparent">
+                            Visita {companies[companyIndex].title}
+                            <span>
+                                <img src={arrow_orange} alt="Platino HN" className="h-4 ml-2" />
+                            </span>
+                        </button>
+                    </div>
                     <div>
-                        {companies.map(function (item, index) {
-                            return (
-                                <div key={index} onClick={() => setCompanyIndex(index)} className={`cursor-pointer border ${companyIndex === index ? "bg-white" : "bg-transparent"} border-white h-2 p-1 my-6`}></div>
-                            );
-                        })}
+                        <div className="bg-transparent">
+                            <div>
+                                {companies.map(function (item, index) {
+                                    return (
+                                        <div key={index} onClick={() => setCompanyIndex(index)} className={`cursor-pointer border ${companyIndex === index ? "bg-white" : "bg-transparent"} border-white h-2 p-1 my-6`}></div>
+                                    );
+                                })}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
