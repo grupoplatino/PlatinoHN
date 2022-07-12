@@ -1,3 +1,7 @@
+import Slider from "react-slick";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 const Blog = () => {
   const posts = [
     {
@@ -86,33 +90,69 @@ const Blog = () => {
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
             </p>
           </div>
-          <div className="container px-4 mt-12 mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 lg:max-w-none">
-            {posts.map((post, index) => (
-              index < 3 ?
-              <div key={index} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                <div className="flex-shrink-0">
-                  <img className="h-48 w-full object-cover" src={post.imageUrl} alt="" />
-                </div>
-                <div className="flex-1 bg-white p-6 flex flex-col justify-between">
-                  <div className="flex-1">
-                    <div className="flex justify-between">
-                    <p className="text-sm font-medium text-orange-600">
-                      <a href={post.category.href} className="hover:underline">
-                        {post.category.name}
-                      </a>
-                    </p>
-                    <p className="text-gray-600">
-                      {post.date}
-                    </p>
+          <div className="container mx-auto">
+            <Slider slidesToShow={3} dots={true}>
+              {posts.map(function (post, index) {
+                return (
+                  <div key={index} className="px-4 pt-10 pb-5">
+                  <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                    <div className="flex-shrink-0">
+                      <LazyLoadImage className="object-cover object-center" src={post.imageUrl} alt={post.title} effect="blur"/>
                     </div>
-                    <a href={post.href} className="block mt-2">
-                      <p className="text-xl font-semibold text-gray-900">{post.title}</p>
-                      <p className="mt-3 text-base text-gray-500">{post.description}</p>
-                    </a>
+                    <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                      <div className="flex-1">
+                        <div className="flex justify-between">
+                          <p className="text-sm font-medium text-orange-600">
+                            <a href={post.category.href} className="hover:underline">
+                              {post.category.name}
+                            </a>
+                          </p>
+                          <p className="text-gray-600">
+                            {post.date}
+                          </p>
+                        </div>
+                        <div className="block mt-2">
+                          <p className="text-xl font-semibold text-gray-900">{post.title}</p>
+                          <p className="mt-3 text-base text-gray-500">{post.description}</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>:<div></div>
-            ))}
+                  </div>
+                )
+
+              })}
+            </Slider>
+          </div>
+          <div className="md:hidden">
+            <div className="container px-4 mt-12 mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 lg:max-w-none">
+              {posts.map((post, index) => (
+                index < 4 ?
+                  <div key={index} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                    <div className="flex-shrink-0">
+                      <LazyLoadImage className="object-cover object-center" src={post.imageUrl} alt={post.title} effect="blur"/>
+                    </div>
+                    <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                      <div className="flex-1">
+                        <div className="flex justify-between">
+                          <p className="text-sm font-medium text-orange-600">
+                            <a href={post.category.href} className="hover:underline">
+                              {post.category.name}
+                            </a>
+                          </p>
+                          <p className="text-gray-600">
+                            {post.date}
+                          </p>
+                        </div>
+                        <a href={post.href} className="block mt-2">
+                          <p className="text-xl font-semibold text-gray-900">{post.title}</p>
+                          <p className="mt-3 text-base text-gray-500">{post.description}</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div> : <div></div>
+              ))}
+            </div>
           </div>
         </div>
       </div></>

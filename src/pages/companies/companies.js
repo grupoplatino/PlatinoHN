@@ -12,6 +12,8 @@ import {
     platino_usados
 } from "../../assets/index";
 import ScrollToTop from "../../utils/scroll-to-top";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Companies = () => {
     const [companyIndex, setCompanyIndex] = useState(0);
@@ -108,7 +110,7 @@ const Companies = () => {
                 <img src={companies[companyIndex].bg} alt="Platno HN" className="w-screen" />
             </div>
             <div className="container mx-auto px-8 py-5 block md:block lg:hidden">
-                <img src={companies[companyIndex].logo} alt="Motors" className="mt-4" />
+                <LazyLoadImage effect="blur" src={companies[companyIndex].logo} alt="Motors" className="mt-4" />
                 <p className="my-4 leading-6">{companies[companyIndex].desc}</p>
                 <button className="mb-4 mt-2 inline-flex items-center justify-center py-3 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md 
                         text-orange-600 border-orange-600">
@@ -122,7 +124,7 @@ const Companies = () => {
             <div className="h-screen items-center absolute hidden lg:block lg:top-1/4 xl:top-1/3 left-0">
                 <div className="flex justify-around items-center">
                     <div className="bg-white px-10 py-5 my-auto rounded-lg w-1/3 lg:w-2/4 xl:w-2/5 2xl:w-1/3">
-                        <img src={companies[companyIndex].logo} alt="Motors" className="mt-4 2xl:w-3/5" />
+                        <LazyLoadImage effect="blur" src={companies[companyIndex].logo} alt="Motors" className="mt-4 2xl:w-3/5" />
                         <p className="my-4 leading-6">{companies[companyIndex].desc}</p>
                         <button className="mb-4 mt-2 inline-flex items-center justify-center py-3 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md 
                         text-orange-600 border-orange-600">

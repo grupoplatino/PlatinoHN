@@ -1,3 +1,5 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 function Services(props) {
     return (
         <section className="container px-5 py-12 mx-auto lg:px-5 w-full">
@@ -21,7 +23,7 @@ function Services(props) {
                     </div>
                 </div>
                 <div className="mb-0 md:mb-6 col-span-12 md:pb-0 md:col-span-12 md:mx-auto lg:col-span-5">
-                    <img className="w-100" src={props.icon} alt="Platino HN" />
+                    <LazyLoadImage effect="blur" className="w-100" src={props.icon} alt="Platino HN" />
                 </div>
             </div>
         </section>

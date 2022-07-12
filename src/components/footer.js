@@ -218,7 +218,7 @@ function Footer() {
                   return (
                     <div key={index}>
                       <a href={item.url} target="text">
-                        <img className="h-24 object-contain md:object-scale-down mx-2 lg:h-14 xl:h-24 2xl:h-32"
+                        <LazyLoadImage effect="blur" className="h-24 object-contain md:object-scale-down mx-2 lg:h-14 xl:h-24 2xl:h-32"
                           src={item.logo}
                           alt={item.alt} />
                       </a>

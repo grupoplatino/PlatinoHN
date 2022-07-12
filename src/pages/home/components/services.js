@@ -1,5 +1,6 @@
-import "react-lazy-load-image-component/src/effects/blur.css";
 import { Dashboard } from "../../../assets";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Services = () => {
     const metrics = [
@@ -32,10 +33,11 @@ const Services = () => {
                             </div>
                         </div>
                         <div className="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
-                            <img
+                            <LazyLoadImage
                                 className="transform translate-x-6 shadow-2xl translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20"
                                 src={Dashboard}
-                                alt="App screenshot"
+                                alt="Platino ID"
+                                effect="blur"
                             />
                         </div>
                     </div>
