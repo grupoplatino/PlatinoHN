@@ -1,32 +1,21 @@
 import Footer from './components/footer';
 import NavBar from './components/navbar';
 import {
-  Route,
   HashRouter,
-  Routes
 } from "react-router-dom";
-import Financing from './pages/financing/financing';
-import Contact from './pages/contact/contact';
 import { useEffect } from 'react';
-import { AboutUsPage } from './pages/about-us';
-import { CompaniesPage } from './pages/companies';
-import { HomePage } from './pages/home';
+import ScrollToTop from './utils/scroll-to-top';
+import RoutesConfig from './routes/route-config';
 
 
 function App() {
   useEffect(() => {
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    ScrollToTop();
   }, []);
   return (
     <HashRouter>
       <NavBar />
-      <Routes>
-        <Route path="/aboutUs" element={<AboutUsPage/>}/>
-        <Route path="/companies" element={<CompaniesPage/>}/>
-        <Route path="/financing" element={<Financing/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/" element={<HomePage/>}/>
-      </Routes>
+      <RoutesConfig/>
       <Footer /> 
     </HashRouter>
   );

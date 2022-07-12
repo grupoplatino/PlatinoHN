@@ -77,6 +77,10 @@ input:checked~.tab-content {
   max-height: 100vh;
 }
 
+.opc-snall{
+  opacity: 0.3;
+}
+
 
 @media (max-width: 768px) {
   .h-iso-gray {

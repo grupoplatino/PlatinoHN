@@ -1,5 +1,6 @@
 import arrow from "../../../assets/images/icons/right_arrow.svg"
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 function Companies(props) {
     let data = Array.from(props.companies)
     return (
@@ -11,7 +12,7 @@ function Companies(props) {
                         <div key={index} className="border p-4">
                             <div className="flex items-center">
                                 <div className="mx-3">
-                                    <img className="w-100 h-20" src={item.logo} alt="Platino Capital" />
+                                    <LazyLoadImage effect="blur" className="w-100 h-20" src={item.logo} alt={item.title} />
                                 </div>
                                 <div className="mx-2">
                                     <p className="font-semibold">{item.title}</p>

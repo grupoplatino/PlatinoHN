@@ -13,7 +13,8 @@ import repuestos from "../../../assets/images/categories/repuestos.svg";
 import transporte from "../../../assets/images/categories/transporte.svg";
 import financiamiento from "../../../assets/images/categories/sany.jpeg";
 import bg_item from "../../../assets/images/categories/landing_nosotros.jpg";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import {
     platino_capital_white_letter,
     platino_ferreteria_white_letter,
@@ -29,23 +30,24 @@ import ScrollToTop from "../../../utils/scroll-to-top";
 function Hero() {
     const [nav1, setNav1] = useState();
     const [nav2, setNav2] = useState();
+    const [itemIndex, setItemIndex] = useState(0);
 
     const bgSettings = {
         dots: false,
-        speed: 1000,
-        cssEase: "linear",
+        speed: 2000,
+        cssEase: "cubic-bezier(0.600, -0.280, 0.735, 0.045)",
     }
 
     const settings = {
         dots: false,
-        infinite: true,
+        infinite: false,
         slidesToShow: 8,
         slidesToScroll: 1,
         autoplay: false,
         arrows: false,
         speed: 2000,
         autoplaySpeed: 1000,
-        cssEase: "linear",
+        cssEase: "cubic-bezier(0.600, -0.280, 0.735, 0.045)",
         responsive: [
             {
                 breakpoint: 900,
@@ -149,7 +151,7 @@ function Hero() {
             logo: repuestos,
             url: "https://www.grupoplatino.hn/",
             alt: "Repuestos",
-            company: "Platino Repeuestos",
+            company: "Platino Repuestos",
             logo_company: platino_repuestos_white_letter,
             bg_company: financiamiento,
             desc_company: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -185,7 +187,7 @@ function Hero() {
                                 </div>
                                 <div className="container h-screen w-10/12 sm:w-8/12 lg:w-6/12 items-center flex text-white mx-auto">
                                     <div className="mb-36">
-                                        <img src={item.logo_company} alt="Motors" className="mt-4 xl:w-3/5 xl:mx-auto" />
+                                        <LazyLoadImage effect="blur" src={item.logo_company} alt={item.alt}className="mt-4 xl:w-3/5 xl:mx-auto" />
                                         <div className="text-center mt-6 2xl:px-20">
                                             <p>{item.desc_company}</p>
                                         </div>
@@ -213,11 +215,11 @@ function Hero() {
                             ref={(slider2) => setNav2(slider2)} {...settings} className="w-full">
                             {categories.map(function (item, index) {
                                 return (
-                                    <div className="text-center" key={index}>
+                                    <div onClick={()=> setItemIndex(index)} className="text-center" key={index}>
                                         <img className="h-12 lg:h-14 mx-auto"
                                             src={item.logo}
                                             alt={item.alt} />
-                                        <p className="text-white font-semibold mt-4">
+                                        <p className={`text-white ${index === itemIndex ? "font-bold text-lg": "font-normal"} mt-4`}>
                                             {item.title}
                                         </p>
                                     </div>
@@ -256,4 +258,4 @@ const NextBtn = (props) => {
     );
 };
 
-export default Hero;
+export default Hero;                                    
