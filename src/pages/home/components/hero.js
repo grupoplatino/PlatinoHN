@@ -216,7 +216,7 @@ function Hero() {
                             {categories.map(function (item, index) {
                                 return (
                                     <div onClick={()=> setItemIndex(index)} className="text-center" key={index}>
-                                        <img className="h-12 lg:h-14 mx-auto"
+                                        <img className={`h-12 mx-auto ${index === itemIndex ? "": "opacity-small"}`}
                                             src={item.logo}
                                             alt={item.alt} />
                                         <p className={`text-white ${index === itemIndex ? "font-bold text-lg": "font-normal"} mt-4`}>

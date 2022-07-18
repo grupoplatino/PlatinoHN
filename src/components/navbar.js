@@ -1,20 +1,55 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import platino_hn from "../assets/images/companies/phn.png";
 import { AiOutlineAppstore } from "react-icons/ai";
+
 import { Link } from "react-router-dom";
 import { Disclosure } from '@headlessui/react';
-// import { platino_capital, platino_ferreteria, platino_inmobiliaria, platino_logistics, platino_motors, platino_repuestos, platino_software, platino_usados } from "../assets";
+import { Menu, Transition } from '@headlessui/react'
+
+import { platino_capital, platino_ferreteria, platino_inmobiliaria, platino_logistics, platino_motors, platino_repuestos, platino_software, platino_usados } from "../assets";
+import { IoMdClose } from "react-icons/io";
 
 const NavBar = () => {
     const [show, setShow] = useState(false);
     const [navIndex, setNavIndex] = useState(0);
     const [navColor] = useState("bg-blackCustom-900");
 
-    const navItems = [
+    const companies = [
         {
-            title: "Inicio",
-            uri: "/"
+            logo: platino_motors,
+            url: ""
         },
+        {
+            logo: platino_capital,
+            url: ""
+        },
+        {
+            logo: platino_ferreteria,
+            url: ""
+        },
+        {
+            logo: platino_inmobiliaria,
+            url: ""
+        },
+        {
+            logo: platino_logistics,
+            url: ""
+        },
+        {
+            logo: platino_repuestos,
+            url: ""
+        },
+        {
+            logo: platino_software,
+            url: ""
+        },
+        {
+            logo: platino_usados,
+            url: ""
+        },
+    ]
+
+    const navItems = [
         {
             title: "Compañias",
             uri: "/companies"
@@ -105,15 +140,11 @@ const NavBar = () => {
                     {({ close }) => (
                         <div className="text-white">
                             {navItems.map((item, index) => (
-                                <div className="w-full text-center">
+                                <div className="w-full text-center" key={index}>
                                     <hr className="opc-snall" />
                                     <Link
-                                        key={index}
                                         to={item.uri}
-                                        className="block px-3 py-3 rounded-md text-base font-medium"
-                                        onClick={() => {
-                                        }}
-                                    >
+                                        className="block px-3 py-3 rounded-md text-base font-medium">
                                         {item.title}
                                     </Link>
                                 </div>
@@ -127,9 +158,50 @@ const NavBar = () => {
                                         </button>
                                     </div>
                                 </div>
-                                <button type="button" className="bg-grayCustom-800 p-2 rounded-full text-blackCustom-900 hover:text-blackCustom-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-grayCustom-800 focus:ring-white">
+                                {/* <button type="button" className="bg-grayCustom-800 p-2 rounded-full text-blackCustom-900 hover:text-blackCustom-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-grayCustom-800 focus:ring-white">
                                     <AiOutlineAppstore size={20} />
-                                </button>
+                                </button> */}
+                                <Menu as="div" className="relative inline-block text-left">
+                                    <div>
+                                        <Menu.Button className="bg-grayCustom-800 p-2 rounded-full text-blackCustom-900 hover:text-blackCustom-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-grayCustom-800 focus:ring-white">
+                                            <AiOutlineAppstore size={20} />
+                                        </Menu.Button>
+                                    </div>
+                                    <Transition
+                                        as={Fragment}
+                                        enter="transition ease-out duration-100"
+                                        enterFrom="transform opacity-0 scale-95"
+                                        enterTo="transform opacity-100 scale-100"
+                                        leave="transition ease-in duration-75"
+                                        leaveFrom="transform opacity-100 scale-100"
+                                        leaveTo="transform opacity-0 scale-95"
+                                    >
+                                        <Menu.Items className="origin-top-right absolute -right-36 mt-2 w-96 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                            <div className="py-1">
+                                                <div className="bg-gray-100 flex justify-between px-4 py-2 text-black">
+                                                    <div className="flex">
+                                                        <AiOutlineAppstore size={20} />
+                                                        <p className="mx-4 font-semibold">Aplicaciones</p>
+                                                    </div>
+                                                    <div>
+                                                        <Menu.Item>
+                                                            <IoMdClose size={20} />
+                                                        </Menu.Item>
+                                                    </div>
+                                                </div>
+                                                {companies.map(function (item, index) {
+                                                    return (
+                                                        <Menu.Item key={index}>
+                                                            <div className="py-2 px-4">
+                                                                <img src={item.logo} className="h-9" alt="" />
+                                                            </div>
+                                                        </Menu.Item>
+                                                    )
+                                                })}
+                                            </div>
+                                        </Menu.Items>
+                                    </Transition>
+                                </Menu>
                             </div>
                         </div>
                     )}
