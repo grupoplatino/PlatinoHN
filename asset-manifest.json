@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PlatinoHN/static/css/main.15979f70.css",
-    "main.js": "/PlatinoHN/static/js/main.97995ac4.js",
+    "main.css": "/PlatinoHN/static/css/main.4dacf379.css",
+    "main.js": "/PlatinoHN/static/js/main.43f775eb.js",
     "static/media/dashboard.png": "/PlatinoHN/static/media/dashboard.a6fd9554cdfc80bab764.png",
     "static/media/sany.jpeg": "/PlatinoHN/static/media/sany.3fdfa145cad4d8fbfde2.jpeg",
     "static/media/landing_post-venta.jpg": "/PlatinoHN/static/media/landing_post-venta.109c9291d0047a7ccd56.jpg",
@@ -14,9 +14,9 @@
     "static/media/platino_inmobiliaria_white_letter.png": "/PlatinoHN/static/media/platino_inmobiliaria_white_letter.052554d667e29892f790.png",
     "static/media/platino_motors_white_letter.png": "/PlatinoHN/static/media/platino_motors_white_letter.d9503f9c90e67eb8fda4.png",
     "static/media/platino_usados_white_letter.png": "/PlatinoHN/static/media/platino_usados_white_letter.0dff0e71b15257e29b82.png",
-    "static/media/grupo_platino.png": "/PlatinoHN/static/media/grupo_platino.336a67bfb0a52f52b416.png",
     "static/media/logo_motors_white.png": "/PlatinoHN/static/media/logo_motors_white.3012dd01470df0a1222c.png",
     "static/media/platino_hn.png": "/PlatinoHN/static/media/platino_hn.224f2303606ed0326f08.png",
+    "static/media/grupo_platino.png": "/PlatinoHN/static/media/grupo_platino.e5c8b8d92add615f075b.png",
     "static/media/platino_capital.png": "/PlatinoHN/static/media/platino_capital.b32e4c6cc26985d79bf8.png",
     "static/media/platino_motors.png": "/PlatinoHN/static/media/platino_motors.40e2c4bfc8c1adaf8064.png",
     "static/media/platino_software.png": "/PlatinoHN/static/media/platino_software.39f2c6cad62e873ebbc0.png",
@@ -63,11 +63,11 @@
     "static/media/open_new_tab_icon.svg": "/PlatinoHN/static/media/open_new_tab_icon.2317b40cc7ccb3d04883e35f534ae1b8.svg",
     "static/media/right_arrow_black.svg": "/PlatinoHN/static/media/right_arrow_black.146ded2110477f7ba9d8c4f4eee73987.svg",
     "static/media/linkedin_icon.svg": "/PlatinoHN/static/media/linkedin_icon.9960d005bbffe9dbd9d2e4a0c0b28573.svg",
-    "main.15979f70.css.map": "/PlatinoHN/static/css/main.15979f70.css.map",
-    "main.97995ac4.js.map": "/PlatinoHN/static/js/main.97995ac4.js.map"
+    "main.4dacf379.css.map": "/PlatinoHN/static/css/main.4dacf379.css.map",
+    "main.43f775eb.js.map": "/PlatinoHN/static/js/main.43f775eb.js.map"
   },
   "entrypoints": [
-    "static/css/main.15979f70.css",
-    "static/js/main.97995ac4.js"
+    "static/css/main.4dacf379.css",
+    "static/js/main.43f775eb.js"
   ]
 }
