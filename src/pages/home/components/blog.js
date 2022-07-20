@@ -25,7 +25,7 @@ const Blog = () => {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 540,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -84,84 +84,83 @@ const Blog = () => {
     },
   ]
   const openUrl = (url) => {
-    if(url !== "" || url !== undefined){
+    if (url !== "" || url !== undefined) {
       window.open(url, "_blank", "noopener,noreferrer");
     }
   }
   return (
-      <div className="relative bg-white pt-16 pb-10 px-4 sm:px-6 lg:px-8">
-        <div className="absolute inset-0">
-          <div className="bg-white h-1/3 sm:h-2/3" />
+    <div className="relative bg-white pt-16 pb-10 px-4 sm:px-6 lg:px-8">
+      <div className="absolute inset-0">
+        <div className="bg-white h-1/3 sm:h-2/3" />
+      </div>
+      <div className="relative container mx-auto">
+        <div className="text-center">
+          <h2 className="text-3xl tracking-tight text-start md:text-center font-extrabold text-gray-900 sm:text-4xl">Noticias</h2>
+          <p className="mt-3 max-w-2xl text-start md:text-center mx-auto text-xl text-gray-500 sm:mt-4">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
+          </p>
         </div>
-        <div className="relative container mx-auto">
-          <div className="text-center">
-            <h2 className="text-3xl tracking-tight text-start md:text-center font-extrabold text-gray-900 sm:text-4xl">From the blog</h2>
-            <p className="mt-3 max-w-2xl text-start md:text-center mx-auto text-xl text-gray-500 sm:mt-4">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
-            </p>
-          </div>
-          <div className="container mx-auto blog-carousel mt-8">
-            <Slider {...settings} prevArrow={<PreviousBtn />}
-                    nextArrow={<NextBtn />}>
-              {posts.map(function (post, index) {
-                return (
-                  <div key={index} className="px-4 pt-10 pb-5">
-                    <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                      <div className="flex-shrink-0">
-                        <LazyLoadImage className="object-cover object-center" src={post.imageUrl} alt={post.title} effect="blur" />
-                      </div>
-                      <div className="bg-white p-6">
-                        <div className="flex-1">
-                          <div className="flex justify-between">
-                            <p className="text-sm font-medium text-orange-600">
-                              <p onClick={()=> openUrl(post.category.href)} className="hover:underline hover:cursor-pointer">
-                                {post.category.name}
-                              </p>
+        <div className="container mx-auto blog-carousel mt-8">
+          <Slider {...settings} prevArrow={<PreviousBtn />}
+            nextArrow={<NextBtn />}>
+            {posts.map(function (post, index) {
+              return (
+                <div key={index} className="px-4 pt-10 pb-5">
+                  <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                    <div className="flex-shrink-0">
+                      <LazyLoadImage className="object-cover object-center" src={post.imageUrl} alt={post.title} effect="blur" />
+                    </div>
+                    <div className="bg-white p-6">
+                      <div className="flex-1">
+                        <div className="flex justify-between">
+                          <p className="text-sm font-medium text-orange-600">
+                            <p onClick={() => openUrl(post.category.href)} className="hover:underline hover:cursor-pointer">
+                              {post.category.name}
                             </p>
-                            <p className="text-gray-600">
-                              {post.date}
-                            </p>
-                          </div>
-                          <div className="block mt-2">
-                            <p className="text-xl font-semibold text-gray-900">{post.title}</p>
-                            <p className="mt-3 text-base text-gray-500">{post.description}</p>
-                          </div>
+                          </p>
+                          <p className="text-gray-600">
+                            {post.date}
+                          </p>
+                        </div>
+                        <div className="block mt-2">
+                          <p className="text-xl font-semibold text-gray-900">{post.title}</p>
+                          <p className="mt-3 text-base text-gray-500">{post.description}</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                )
-
-              })}
-            </Slider>
-          </div>
+                </div>
+              )
+            })}
+          </Slider>
         </div>
       </div>
+    </div>
   );
 }
 
 const PreviousBtn = (props) => {
   const { className, onClick } = props;
   return (
-      <div className={className} onClick={onClick}>
-          <div className="bg-orangeCustom-400 rounded-full">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 2xl:h-9 2xl:w-9" fill="#ffffff" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-              </svg>
-          </div>
+    <div className={className} onClick={onClick}>
+      <div className="bg-orangeCustom-400 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 2xl:h-9 2xl:w-9" fill="#ffffff" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
       </div>
+    </div>
   );
 };
 const NextBtn = (props) => {
   const { className, onClick } = props;
   return (
-      <div className={className} onClick={onClick}>
-          <div className="bg-orangeCustom-400 rounded-full">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 2xl:h-9 2xl:w-9" fill="#ffffff" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-          </div>
+    <div className={className} onClick={onClick}>
+      <div className="bg-orangeCustom-400 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 2xl:h-9 2xl:w-9" fill="#ffffff" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
       </div>
+    </div>
   );
 };
 

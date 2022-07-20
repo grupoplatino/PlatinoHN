@@ -21,42 +21,50 @@ function AboutUs() {
         {
             logo: iso_motors,
             title: "Renta y Venta de Maquinaria",
-            subTitle: "Platino Motors"
+            subTitle: "Platino Motors",
+            isActive: true
         },
         {
             logo: iso_ferreteria,
             title: "Ferreteria en Linea",
-            subTitle: "Ferreteria Platino"
+            subTitle: "Ferreteria Platino",
+            isActive: false
         },
         {
             logo: iso_software,
             title: "Software de Construcción",
-            subTitle: "Platno Software"
+            subTitle: "Platno Software",
+            isActive: false
         },
         {
             logo: iso_usados,
             title: "Clasificados de Equipos",
-            subTitle: "Platino Maketplace"
+            subTitle: "Platino Maketplace",
+            isActive: false
         },
         {
             logo: iso_capital,
             title: "Platino Capital",
-            subTitle: "Platino Capital"
+            subTitle: "Platino Capital",
+            isActive: false
         },
         {
             logo: iso_inmobiliaria,
             title: "Inmobiliaria",
-            subTitle: "Inmobiliaria Platino"
+            subTitle: "Inmobiliaria Platino",
+            isActive: false
         },
         {
             logo: iso_repuestos,
             title: "Repuestos",
-            subTitle: "Repuestos Platino"
+            subTitle: "Repuestos Platino",
+            isActive: false
         },
         {
             logo: iso_logistics,
             title: "Gestión de Carga",
-            subTitle: "Platino Logistics"
+            subTitle: "Platino Logistics",
+            isActive: false
         },
     ]
 

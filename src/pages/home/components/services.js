@@ -16,9 +16,9 @@ const Services = () => {
                     <div className="overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
                         <div className="pt-10 pb-12 px-6 sm:pt-16 lg:py-16 lg:pr-0 xl:py-20">
                             <div className="lg:self-center">
-                                <h2 className="text-3xl font-extrabold text-gray-800 sm:text-4xl">
-                                    <span className="block">Ready to dive in?</span>
-                                    <span className="block">Start your free trial today.</span>
+                                <h2 className="text-3xl font-semibold text-gray-800 sm:text-4xl">
+                                    <span className="block mb-3">Listo para una nueva experiencia?</span>
+                                    <span className="block">Registra tu cuenta gratis.</span>
                                 </h2>
                                 <p className="mt-4 text-lg leading-6 text-gray-800">
                                     Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla
@@ -28,7 +28,7 @@ const Services = () => {
                                     href="/#"
                                     className="mt-8 bg-orange-600 border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-white"
                                 >
-                                    Sign up for free
+                                    Registrate gratis
                                 </a>
                             </div>
                         </div>
@@ -61,9 +61,9 @@ const Services = () => {
                 </div>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
                     <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
-                        <h2 className="text-sm font-semibold text-orange-600 tracking-wide uppercase">Valuable Metrics</h2>
-                        <p className="mt-3 text-3xl font-extrabold text-white">
-                            Get actionable data that will help grow your business
+                        <h2 className="text-sm font-semibold text-orange-600 tracking-wide uppercase">Nuestro servico</h2>
+                        <p className="mt-3 text-3xl font-semibold text-white">
+                        Obtenga servicios y productos de calidad que ayudarán a hacer crecer su negocio
                         </p>
                         <p className="mt-5 text-lg text-gray-300">
                             Rhoncus sagittis risus arcu erat lectus bibendum. Ut in adipiscing quis in viverra tristique sem. Ornare

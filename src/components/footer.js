@@ -105,70 +105,80 @@ function Footer() {
                       <div className="grid grid-cols-6 gap-6">
                         <div className="col-span-6 sm:col-span-3">
                           <label className="text-start block mb-2 text-sm font-medium text-white">
-                            First name
+                            Nombre
                           </label>
                           <input
                             type="text"
                             name="first-name"
                             id="first-name"
-                            placeholder="First name"
+                            placeholder="FNombre"
                             autoComplete="given-name"
-                            className="py-1 text-white px-4 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
+                            className="py-3 text-white px-4 bg-transparent border block w-full shadow-sm sm:text-sm border-gray-300"
                           />
                         </div>
 
                         <div className="col-span-6 sm:col-span-3">
                           <label className="text-start block mb-2 text-sm font-medium text-white">
-                            Last name
+                            Apellido
                           </label>
                           <input
                             type="text"
                             name="last-name"
                             id="last-name"
-                            placeholder="Last name"
+                            placeholder="Apellido"
                             autoComplete="family-name"
-                            className="py-1 text-white px-4 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
+                            className="py-3 text-white px-4 bg-transparent border block w-full shadow-sm sm:text-sm border-gray-300"
                           />
                         </div>
 
                         <div className="col-span-6 sm:col-span-3">
                           <label className="text-start block mb-2 text-sm font-medium text-white">
-                            Email address
+                            Correo electrónico
                           </label>
                           <input
                             type="text"
                             name="email-address"
                             id="email-address"
-                            placeholder="Email"
+                            placeholder="Correo electrónico"
                             autoComplete="email"
-                            className="py-1 text-white px-4 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
+                            className="py-3 text-white px-4 bg-transparent border block w-full shadow-sm sm:text-sm border-gray-300"
                           />
                         </div>
 
                         <div className="col-span-6 sm:col-span-3">
                           <label className="text-start block mb-2 text-sm font-medium text-white">
-                            Phone Number
+                            Número de teléfono
                           </label>
+                          <div className="flex">
                           <input
                             type="text"
                             name="phone-number"
                             id="phone-number"
-                            placeholder="Phone Number"
+                            placeholder="+504"
                             autoComplete="phone-number"
-                            className="py-1 text-white px-4 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
+                            className="py-3 w-20 mr-2 text-white px-4 bg-transparent border block shadow-sm sm:text-sm border-gray-300"
                           />
+                          <input
+                            type="text"
+                            name="phone-number"
+                            id="phone-number"
+                            placeholder="0000-0000"
+                            autoComplete="phone-number"
+                            className="py-3 text-white px-4 bg-transparent border block w-full shadow-sm sm:text-sm border-gray-300"
+                          />
+                          </div>
                         </div>
 
                         <div className="col-span-6">
                           <label className="text-start block mb-2 text-sm font-medium text-white">
-                            Message
+                            Mensaje
                           </label>
                           <textarea
                             type="text"
                             name="message"
                             rows={4}
                             id="message"
-                            placeholder="Message"
+                            placeholder="Mensaje"
                             autoComplete="message"
                             className="py-1 text-white px-4 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
                           />
@@ -211,7 +221,7 @@ function Footer() {
         </div>
         <hr />
         <div className="w-full px-5 py-5">
-          <div className="text-center">
+          <div className="md:text-center">
             <div>
               <div className="w-full grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-6">
                 {listItems.map(function (item, index) {

@@ -2,43 +2,41 @@ function NewsLetters() {
   return (
     <>
       <div className="bg-blackCustom-900">
-        <div className="container mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center">
-          <div className="lg:w-0 lg:flex-1">
-            <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" id="newsletter-headline">
-              Sign up for our newsletter
+        <div className="container mx-auto pt-12 px-4 sm:px-6 lg:pt-16 lg:px-8 lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:items-center">
+          <div className="lg:grid-cols-1 xl:col-span-2">
+            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl" id="newsletter-headline">
+              Suscribete
             </h2>
             <p className="mt-3 max-w-3xl text-lg leading-6 text-gray-300">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat commodo. Elit sunt amet
-              fugiat veniam occaecat fugiat.
+              Suscribete y recibe notificaciones de cada una de las novedades de nuestra plataforma, mantente actualizado sobre nuestros productos y servicios.
             </p>
           </div>
-          <div className="mt-8 lg:mt-0 lg:ml-8">
-            <form className="sm:flex">
-              <label htmlFor="email-address" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="email-address"
-                name="email-address"
-                type="email"
-                autoComplete="email"
-                required
-                className="w-full px-5 py-3 border border-transparent placeholder-gray-500 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white focus:border-white sm:max-w-xs rounded-md"
-                placeholder="Enter your email"
-              />
+          <div className="mt-8 lg:mt-0 lg:col-span-1">
+            <form className="grid grid-cols-1 sm:grid-cols-2 lg:justify-end">
+              <div className="">
+                <input
+                  id="email-address"
+                  name="email-address"
+                  type="email"
+                  autoComplete="email"
+                  required
+                  className="w-full px-5 py-3 border border-transparent placeholder-gray-500 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white focus:border-white sm:max-w-xs rounded-md"
+                  placeholder="Ingresa tu correo"
+                />
+              </div>
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button
                   type="submit"
                   className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
                 >
-                  Notify me
+                  Notificame
                 </button>
               </div>
             </form>
             <p className="mt-3 text-sm text-gray-300">
-              We care about the protection of your data. Read our{" "}
+              Nos preocupamos por la protección de tus datos. Lea nuestra{" "}
               <a href="/#" className="text-white font-medium underline">
-                Privacy Policy.
+                Politica de privacidad.
               </a>
             </p>
           </div>
