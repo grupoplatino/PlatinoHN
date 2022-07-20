@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PlatinoHN/static/css/main.7b2abba5.css",
-    "main.js": "/PlatinoHN/static/js/main.61e3c831.js",
+    "main.js": "/PlatinoHN/static/js/main.46aa2d73.js",
     "static/media/dashboard.png": "/PlatinoHN/static/media/dashboard.a6fd9554cdfc80bab764.png",
     "static/media/sany.jpeg": "/PlatinoHN/static/media/sany.3fdfa145cad4d8fbfde2.jpeg",
     "static/media/landing_post-venta.jpg": "/PlatinoHN/static/media/landing_post-venta.109c9291d0047a7ccd56.jpg",
@@ -64,10 +64,10 @@
     "static/media/right_arrow_black.svg": "/PlatinoHN/static/media/right_arrow_black.146ded2110477f7ba9d8c4f4eee73987.svg",
     "static/media/linkedin_icon.svg": "/PlatinoHN/static/media/linkedin_icon.9960d005bbffe9dbd9d2e4a0c0b28573.svg",
     "main.7b2abba5.css.map": "/PlatinoHN/static/css/main.7b2abba5.css.map",
-    "main.61e3c831.js.map": "/PlatinoHN/static/js/main.61e3c831.js.map"
+    "main.46aa2d73.js.map": "/PlatinoHN/static/js/main.46aa2d73.js.map"
   },
   "entrypoints": [
     "static/css/main.7b2abba5.css",
-    "static/js/main.61e3c831.js"
+    "static/js/main.46aa2d73.js"
   ]
 }
