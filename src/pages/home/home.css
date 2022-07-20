@@ -22,14 +22,51 @@
     border-top-left-radius: 7px;
 }
 
+.blog-carousel .slick-arrow.slick-prev,
+.blog-carousel .slick-arrow.slick-next {
+    background: none;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    top: 0%;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.blog-carousel .slick-prev {
+    left: 90%;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.blog-carousel .slick-next {
+    right: 1%;
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.opacity-small{
+    opacity: 0.6;
+}
+
+
 .slick-prev::before,
 .slick-next::before {
     display: none;
 }
 
+@media (max-width: 640px) {
+    .blog-carousel .slick-prev {
+        left: 65%;
+    }
+    .blog-carousel .slick-next {
+        right: 4%;
+    }
+}
 
 @media (max-width: 768px) {
-
     .carousel .slick-arrow.slick-next,
     .carousel .slick-arrow.slick-prev {
         display: none;
@@ -53,6 +90,10 @@ and (max-device-width : 1024px) {
     
     .carousel .slick-next {
         right: 5%;
+    }
+
+    .blog-carousel .slick-prev {
+        left: 85%;
     }
 }
 

@@ -64,7 +64,7 @@ function Footer() {
   return (
     <footer className="bg-blackCustom-900">
       <div className="container px-5 py-12 mx-auto lg:px-5">
-        <div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
+        <div className="container mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
           <div className="grid items-center grid-cols-12 gap-3">
             <div className="mb-0 md:mb-6 col-span-12 md:pb-0 md:col-span-12 lg:col-span-5">
               <p className="text-white text-3xl font-semibold">Contáctanos</p>
@@ -99,83 +99,93 @@ function Footer() {
             </div>
             <div className="col-span-12 text-center md:text-left md:col-span-12 lg:col-span-7">
               <div className="mt-5 md:mt-0 md:col-span-2">
-                <form action="#" method="POST">
+                <form>
                   <div className="shadow overflow-hidden sm:rounded-md">
-                    <div className="px-0 md:px-4 lg:px-6 py-5 sm:p-6">
+                    <div className="py-5">
                       <div className="grid grid-cols-6 gap-6">
                         <div className="col-span-6 sm:col-span-3">
                           <label className="text-start block mb-2 text-sm font-medium text-white">
-                            First name
+                            Nombre
                           </label>
                           <input
                             type="text"
                             name="first-name"
                             id="first-name"
-                            placeholder="First name"
+                            placeholder="FNombre"
                             autoComplete="given-name"
-                            className="py-1 text-white px-4 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
+                            className="py-3 text-white px-4 bg-transparent border block w-full shadow-sm sm:text-sm border-gray-300"
                           />
                         </div>
 
                         <div className="col-span-6 sm:col-span-3">
                           <label className="text-start block mb-2 text-sm font-medium text-white">
-                            Last name
+                            Apellido
                           </label>
                           <input
                             type="text"
                             name="last-name"
                             id="last-name"
-                            placeholder="Last name"
+                            placeholder="Apellido"
                             autoComplete="family-name"
-                            className="py-1 text-white px-4 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
+                            className="py-3 text-white px-4 bg-transparent border block w-full shadow-sm sm:text-sm border-gray-300"
                           />
                         </div>
 
                         <div className="col-span-6 sm:col-span-3">
                           <label className="text-start block mb-2 text-sm font-medium text-white">
-                            Email address
+                            Correo electrónico
                           </label>
                           <input
                             type="text"
                             name="email-address"
                             id="email-address"
-                            placeholder="Email"
+                            placeholder="Correo electrónico"
                             autoComplete="email"
-                            className="py-1 text-white px-4 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
+                            className="py-3 text-white px-4 bg-transparent border block w-full shadow-sm sm:text-sm border-gray-300"
                           />
                         </div>
 
                         <div className="col-span-6 sm:col-span-3">
                           <label className="text-start block mb-2 text-sm font-medium text-white">
-                            Phone Number
+                            Número de teléfono
                           </label>
+                          <div className="flex">
                           <input
                             type="text"
                             name="phone-number"
                             id="phone-number"
-                            placeholder="Phone Number"
+                            placeholder="+504"
                             autoComplete="phone-number"
-                            className="py-1 text-white px-4 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
+                            className="py-3 w-20 mr-2 text-white px-4 bg-transparent border block shadow-sm sm:text-sm border-gray-300"
                           />
+                          <input
+                            type="text"
+                            name="phone-number"
+                            id="phone-number"
+                            placeholder="0000-0000"
+                            autoComplete="phone-number"
+                            className="py-3 text-white px-4 bg-transparent border block w-full shadow-sm sm:text-sm border-gray-300"
+                          />
+                          </div>
                         </div>
 
                         <div className="col-span-6">
                           <label className="text-start block mb-2 text-sm font-medium text-white">
-                            Message
+                            Mensaje
                           </label>
                           <textarea
                             type="text"
                             name="message"
                             rows={4}
                             id="message"
-                            placeholder="Message"
+                            placeholder="Mensaje"
                             autoComplete="message"
                             className="py-1 text-white px-4 bg-transparent pt-2 border block w-full shadow-sm sm:text-sm border-gray-300"
                           />
                         </div>
                       </div>
                     </div>
-                    <div className="px-4 pt-1 mb-8 text-center md:text-left sm:px-6">
+                    <div className="pt-1 mb-8 text-center md:text-left">
                       <button
                         type="submit"
                         className="py-4 md:py-3 px-20 md:px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 focus:outline-none"
@@ -194,7 +204,7 @@ function Footer() {
         <div className="flex justify-center w-full">
           <div className="flex flex-col">
             <div className="mx-auto">
-              <LazyLoadImage effect="blur" src={logo_grupo_platino} width="180" className="p-2" />
+              <LazyLoadImage effect="blur" src={logo_grupo_platino} width="250" className="p-2" />
             </div>
             <p className="text-white text-center text-2xl md:text-lg font-semibold">¿Quieres formar parte de nuestro equipo?</p>
             <div className="w-full flex justify-center items-center">
@@ -211,14 +221,14 @@ function Footer() {
         </div>
         <hr />
         <div className="w-full px-5 py-5">
-          <div className="text-center">
+          <div className="md:text-center">
             <div>
               <div className="w-full grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-6">
                 {listItems.map(function (item, index) {
                   return (
                     <div key={index}>
                       <a href={item.url} target="text">
-                        <LazyLoadImage effect="blur" className="h-24 object-contain md:object-scale-down mx-2 lg:h-14 xl:h-24 2xl:h-32"
+                        <LazyLoadImage effect="blur" className="h-10 object-contain mx-2"
                           src={item.logo}
                           alt={item.alt} />
                       </a>

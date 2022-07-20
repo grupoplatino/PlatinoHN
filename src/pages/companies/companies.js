@@ -90,7 +90,7 @@ const Companies = () => {
         <div>
             <div className="py-8 bg-blackCustom-900"></div>
             <div className="container mx-auto">
-                <div className="flex flex-row w-full text-center overflow-x-auto py-4 2xl:justify-center">
+                <div className="flex flex-row w-full text-center overflow-x-auto py-4 2xl:justify-center none-scroll-custom">
                     {companies.map(function (item, index) {
                         return (
                             <div key={index} onClick={() => setCompanyIndex(index)}>

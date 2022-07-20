@@ -1,5 +1,6 @@
 export {default as logo_platino_white} from '../assets/images/companies/platino_hn.png';
 export {default as logo_grupo_platino} from '../assets/images/companies/grupo_platino.png';
+export {default as platino_white} from '../assets/images/companies/phn.png';
 
 //Companies
 export {default as platino_capital_white} from '../assets/images/companies/logo_capital_white.svg';

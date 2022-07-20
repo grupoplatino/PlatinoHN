@@ -81,6 +81,9 @@ input:checked~.tab-content {
   opacity: 0.3;
 }
 
+.none-scroll-custom::-webkit-scrollbar {
+  display: none;
+}
 
 @media (max-width: 768px) {
   .h-iso-gray {

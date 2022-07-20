@@ -21,7 +21,7 @@ function Faq(props) {
                             return (
                                 <div key={index} className="border tab mt-3">
                                     <div className="border-l-2 border-transparent relative">
-                                        <input className="w-full absolute z-10 cursor-pointer opacity-0 h-5 top-6" type="checkbox" id="chck1" />
+                                        <input className="w-full absolute z-10 cursor-pointer opacity-0 h-16" type="checkbox" id="chck1" />
                                         <header className="flex justify-between items-center p-5 pl-8 pr-8 cursor-pointer select-none tab-label">
                                             <span className="text-lg">
                                                 {item.title}

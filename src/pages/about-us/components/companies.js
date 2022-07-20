@@ -9,7 +9,7 @@ function Companies(props) {
                 {/* opacity-50 hover:opacity-100 */}
                 {data.map(function (item, index) {
                     return (
-                        <div key={index} className="border p-4">
+                        <div key={index} className={`border p-4 ${item.isActive ? "": "opacity-70"}`}>
                             <div className="flex items-center">
                                 <div className="mx-3">
                                     <LazyLoadImage effect="blur" className="w-100 h-20" src={item.logo} alt={item.title} />
